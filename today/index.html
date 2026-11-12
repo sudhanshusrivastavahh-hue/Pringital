@@ -16,10 +16,11 @@
   color-scheme:light;
   --bg:#F6F8FA; --card:#FFFFFF; --ink:#2A323C; --muted:#535C68; --accent:#3D5F92; --accent-soft:#E8EEF6; --rule:#E1E6EC; --hl:#EEF3FA; --on-accent:#FFFFFF; --barbg:rgba(246,248,250,.9); --shadow:rgba(42,50,60,.18);
   --font:Montserrat, "Segoe UI", Helvetica, Arial, sans-serif;
+  --soft:#E8EEF6;--sand:#EADFCB;--sand-d:#C9B48F;--terra:#D98C73;--plum:#B9A2C6;--sage:#8DB596;--sage-d:#5E8C6A;--haze:#D4DBE4;--haze2:#BCC6D3;--stone:#7C8796;--g1:#9CC9A6;--g2:#C9DB9A;--g3:#EBD58E;--g4:#E8B27F;--g5:#D98C73;--g6:#B86A6A;
 }
 
 :root[data-theme="dark"]{
-  --bg:#0B0F14; --card:#1E2630; --ink:#E4E9EF; --muted:#B3BDC9; --accent:#9DBCE8; --accent-soft:#263243; --rule:#3A4553; --hl:#263243; --on-accent:#0B0F14; --barbg:rgba(11,15,20,.9); --shadow:rgba(0,0,0,.7);
+  --bg:#0B0F14; --card:#1E2630; --ink:#E4E9EF; --muted:#B3BDC9; --accent:#9DBCE8; --accent-soft:#263243; --rule:#3A4553; --hl:#263243; --on-accent:#0B0F14; --barbg:rgba(11,15,20,.9); --shadow:rgba(0,0,0,.7); --soft:#263243;--sand:#5A4F3E;--sand-d:#8C7A5C;--haze:#2C3644;--haze2:#3A4657;--stone:#8A96A6;
   color-scheme:dark}
 html[data-mode="paper"]{--desk:var(--bg);--paper:var(--card);--ink-2:var(--ink);--ink-3:var(--muted);--hair:var(--rule);--red:var(--accent);--red-wash:var(--accent-soft);--blue:var(--accent);
   --display:var(--font);--serif:var(--font);--sans:var(--font)}
@@ -314,6 +315,22 @@ html mark.dnhl .dn{display:none!important}
 html mark.dnhl a::after{content:" \2197"}
 html .lplay svg path{fill:var(--on-accent)}
 
+
+/* story illustrations */
+.ill{margin:0 0 8px;break-inside:avoid}
+.ill svg{display:block;width:100%;height:auto;border-radius:6px}
+.ill svg text{font-family:var(--font)}
+.ill figcaption{font-size:10px;color:var(--muted);margin-top:3px}
+html[data-mode="paper"] .ill figcaption{font-size:7px}
+html[data-mode="paper"] .second .ill{float:left;width:44%;margin:2px 10px 4px 0}
+html[data-mode="web"] .second .ill{float:left;width:min(46%,320px);margin:4px 20px 10px 0}
+html[data-mode="web"] .leadflow .ill svg{max-width:none;border-radius:8px}
+html[data-mode="web"] .leadflow{columns:1}
+html[data-mode="web"] .lead .ill{float:left;width:min(48%,360px);margin:4px 22px 10px 0}
+html .second .cityl{display:block}
+html .second .cityl .more{clear:both;margin-top:12px}
+html[data-mode="paper"] .second .cityl .more{margin-top:6px}
+@media (max-width:560px){html[data-mode="web"] .second .ill,html[data-mode="web"] .lead .ill{float:none;width:100%;margin:0 0 12px}}
 </style>
 </head>
 <body>
@@ -410,6 +427,32 @@ html .lplay svg path{fill:var(--on-accent)}
         <article class="single">
           <span class="kick">Farmers</span>
           <h2><a href="https://newsonair.gov.in/govt-approves-nutrient-based-subsidy-for-rabi-2026-27-to-ensure-affordable-fertilisers-for-farmers/" target="_blank" rel="noopener">₹62,370 Crore Fertiliser Subsidy for Rabi Season</a></h2>
+          <figure class="ill"><svg viewBox="0 0 400 300" role="img" aria-label="Fertiliser sack marked P and K beside wheat stalks, with a ₹62,370 crore subsidy tag">
+        <rect width="400" height="300" style="fill:var(--soft)"/>
+        <rect y="236" width="400" height="64" style="fill:var(--sand)"/>
+        <path d="M0 236 Q100 226 200 236 T400 236" style="fill:var(--sand-d)" opacity=".35"/>
+        <!-- wheat -->
+        <g style="stroke:var(--sage-d)" stroke-width="3" stroke-linecap="round" fill="none">
+          <path d="M268 236 Q262 170 274 110"/><path d="M300 236 Q300 160 300 96"/><path d="M332 236 Q338 172 326 112"/><path d="M360 236 Q368 190 362 140"/>
+        </g>
+        <g style="fill:var(--sand-d)">
+          <ellipse cx="274" cy="104" rx="7" ry="18"/><ellipse cx="300" cy="88" rx="8" ry="20"/><ellipse cx="326" cy="106" rx="7" ry="18"/><ellipse cx="362" cy="134" rx="6" ry="15"/>
+        </g>
+        <!-- sack -->
+        <path d="M70 120 Q64 100 84 96 L196 96 Q216 100 210 120 L222 228 Q222 240 208 240 L72 240 Q58 240 58 228 Z" style="fill:var(--card);stroke:var(--stone)" stroke-width="2"/>
+        <path d="M84 96 Q140 84 196 96" fill="none" style="stroke:var(--stone)" stroke-width="2"/>
+        <rect x="88" y="138" width="104" height="58" rx="8" style="fill:var(--accent)"/>
+        <text x="140" y="175" text-anchor="middle" font-size="26" font-weight="700" style="fill:var(--card)">P &amp; K</text>
+        <text x="140" y="222" text-anchor="middle" font-size="10" letter-spacing="1.5" style="fill:var(--muted)">FERTILISER</text>
+        <!-- tag -->
+        <g transform="translate(206 44)">
+          <rect width="160" height="44" rx="8" style="fill:var(--card);stroke:var(--accent)" stroke-width="1.5"/>
+          <text x="80" y="20" text-anchor="middle" font-size="15" font-weight="700" style="fill:var(--accent)">₹62,370 crore</text>
+          <text x="80" y="35" text-anchor="middle" font-size="10" style="fill:var(--muted)">+₹24,417 cr over last Rabi</text>
+        </g>
+        <text x="20" y="34" font-size="12" font-weight="600" letter-spacing="1.5" style="fill:var(--ink)">RABI 2026–27</text>
+        <text x="20" y="52" font-size="11" style="fill:var(--muted)">1 October – 31 March</text>
+      </svg><figcaption>Illustration: Pringital News</figcaption></figure>
           <p class="copy"><span class="dl">NEW DELHI:</span> The Union Cabinet has approved Nutrient Based Subsidy rates for P&amp;K fertilisers for Rabi 2026-27: about ₹62,370 crore, ₹24,417 crore more than last Rabi. It covers 1 October to 31 March. <mark class="dnhl"><a href="https://newsonair.gov.in/govt-approves-nutrient-based-subsidy-for-rabi-2026-27-to-ensure-affordable-fertilisers-for-farmers/" target="_blank" rel="noopener"><span class="dn">DN</span>Full story</a></mark></p>
         </article>
 
@@ -417,22 +460,35 @@ html .lplay svg path{fill:var(--on-accent)}
           <span class="kick">Lead · Economy</span>
           <h2><a href="https://theprint.in/economy/retail-inflation-rises-to-two-year-high-of-6-09-pc-in-oct-breaches-rbis-upper-limit/3097042/" target="_blank" rel="noopener">Inflation Hits 2-Year High of 6.09%, Breaks RBI Limit</a></h2>
           <div class="leadflow">
-            <figure>
-              <svg viewBox="0 0 120 130" role="img" aria-label="Illustration: a vegetable basket with a rising red arrow">
-                <rect width="120" height="130" fill="#EEF3FA"/>
-                <path d="M14 112 L40 82 L62 94 L104 40" fill="none" stroke="#4A6FA5" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M92 36 L108 34 L106 50 Z" fill="#4A6FA5"/>
-                <circle cx="38" cy="70" r="11" fill="#E3A08E"/><path d="M34 60 q4 -4 8 0" fill="none" stroke="#8DB596" stroke-width="2.5"/>
-                <circle cx="58" cy="72" r="10" fill="#B9A2C6"/>
-                <path d="M74 64 q8 -10 14 0 q-7 14 -14 0 Z" fill="#8DB596"/>
-                <path d="M22 76 H96 L88 112 H30 Z" fill="#E6D3B1" stroke="#2A323C" stroke-width="1.2"/>
-                <path d="M30 86 H90 M32 96 H88 M34 104 H86" stroke="#B89F78" stroke-width="1.2"/>
-                <rect x="6" y="6" width="58" height="22" fill="#ffffff" stroke="#2A323C" stroke-width=".8"/>
-                <text x="10" y="15" font-family="Inter, sans-serif" font-size="6" font-weight="800" fill="#66707C">CPI · OCTOBER</text>
-                <text x="10" y="25" font-family="Playfair Display, serif" font-size="10" font-weight="900" fill="#4A6FA5">6.09%</text>
-              </svg>
-              <figcaption>Illustration: Pringital News</figcaption>
-            </figure>
+            <figure class="ill"><svg viewBox="0 0 400 300" role="img" aria-label="Bar chart: retail inflation 5.54% in September and 6.09% in October, crossing the RBI's 6% limit, beside a vegetable basket">
+        <rect width="400" height="300" style="fill:var(--soft)"/>
+        <!-- axis -->
+        <line x1="40" y1="240" x2="360" y2="240" style="stroke:var(--stone)" stroke-width="1.5"/>
+        <!-- bars to scale: 0-7% = 160px -->
+        <rect x="70" y="113.4" width="54" height="126.6" rx="4" style="fill:var(--haze2)"/>
+        <rect x="146" y="100.8" width="54" height="139.2" rx="4" style="fill:var(--accent)"/>
+        <!-- RBI 6% line -->
+        <line x1="50" y1="102.9" x2="350" y2="102.9" style="stroke:var(--terra)" stroke-width="2" stroke-dasharray="6 5"/>
+        <text x="350" y="96" text-anchor="end" font-size="11" font-weight="600" style="fill:var(--terra)">RBI upper limit 6%</text>
+        <text x="97" y="133" text-anchor="middle" font-size="13" font-weight="600" style="fill:var(--ink)">5.54%</text>
+        <text x="173" y="93" text-anchor="middle" font-size="15" font-weight="700" style="fill:var(--accent)">6.09%</text>
+        <text x="97" y="258" text-anchor="middle" font-size="11" style="fill:var(--muted)">September</text>
+        <text x="173" y="258" text-anchor="middle" font-size="11" style="fill:var(--muted)">October</text>
+        <!-- basket -->
+        <g transform="translate(232 150)">
+          <circle cx="34" cy="20" r="17" style="fill:var(--terra)"/>
+          <path d="M30 4 q4 -6 9 -2" fill="none" style="stroke:var(--sage-d)" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="62" cy="22" r="15" style="fill:var(--plum)"/>
+          <path d="M80 26 q12 -22 26 -6 q-8 22 -26 6z" style="fill:var(--sage)"/>
+          <circle cx="94" cy="30" r="10" style="fill:var(--sand-d)"/>
+          <path d="M0 34 H118 L106 88 H12 Z" style="fill:var(--sand);stroke:var(--sand-d)" stroke-width="2"/>
+          <path d="M8 50 H110 M11 66 H107" style="stroke:var(--sand-d)" stroke-width="2"/>
+          <path d="M40 34 Q59 -4 78 34" fill="none" style="stroke:var(--sand-d)" stroke-width="3"/>
+        </g>
+        <text x="291" y="262" text-anchor="middle" font-size="11" style="fill:var(--muted)">Food inflation 8.94%</text>
+        <text x="40" y="34" font-size="12" font-weight="600" letter-spacing="1.5" style="fill:var(--ink)">RETAIL INFLATION · CPI</text>
+        <text x="40" y="52" font-size="11" style="fill:var(--muted)">Highest in two years</text>
+      </svg><figcaption>Illustration: Pringital News</figcaption></figure>
             <p class="copy"><span class="dl">NEW DELHI:</span> Retail inflation rose to 6.09% in October from 5.54% in September, data released on Thursday showed, crossing the Reserve Bank’s 6% upper tolerance limit for the first time since October 2024. Food inflation climbed to 8.94% from 7.74% as vegetable and grain prices rose after a deficient monsoon. The reading sets the stage for the RBI’s monetary policy meeting on 2–4 December, where several economists expect a rate hike of 50 to 75 basis points over the coming months, which would push up loan EMIs. Growth remains firm, with SBI Research projecting 7.8% for the July–September quarter. <mark class="dnhl"><a href="https://theprint.in/economy/retail-inflation-rises-to-two-year-high-of-6-09-pc-in-oct-breaches-rbis-upper-limit/3097042/" target="_blank" rel="noopener"><span class="dn">DN</span>Full story</a></mark></p>
           </div>
         </article>
@@ -444,6 +500,31 @@ html .lplay svg path{fill:var(--on-accent)}
           <h2><a href="https://www.outlookindia.com/national/delhi-aqi-today-november-12-2026-air-pollution-pm25-firecracker-pollution-stubble-burning-severe-aqi-forecast" target="_blank" rel="noopener">Capital Braces for ‘Severe’ Air as AQI Heads to 428</a></h2>
         </div>
         <div class="cityl">
+          <figure class="ill"><svg viewBox="0 0 400 300" role="img" aria-label="India Gate fading into smog beside an air quality gauge moving from 314 to 428, the severe band">
+        <rect width="400" height="300" style="fill:var(--haze)"/>
+        <circle cx="70" cy="62" r="22" style="fill:var(--sand)" opacity=".8"/>
+        <!-- skyline -->
+        <g style="fill:var(--haze2)"><rect x="0" y="170" width="22" height="80"/><rect x="26" y="150" width="16" height="100"/><rect x="166" y="160" width="20" height="90"/><rect x="190" y="178" width="14" height="72"/></g>
+        <!-- India Gate -->
+        <g style="fill:var(--stone)">
+          <path fill-rule="evenodd" d="M58 250 V150 H150 V250 H131 V196 A27 27 0 0 0 77 196 V250 Z"/>
+          <rect x="52" y="139" width="104" height="13"/><rect x="72" y="121" width="64" height="18"/><path d="M90 121 Q104 98 118 121 Z"/>
+        </g>
+        <rect y="248" width="400" height="52" style="fill:var(--haze2)"/>
+        <!-- haze bands -->
+        <rect y="132" width="230" height="26" style="fill:var(--haze)" opacity=".75"/>
+        <rect y="190" width="230" height="22" style="fill:var(--haze)" opacity=".7"/>
+        <rect y="226" width="230" height="22" style="fill:var(--haze)" opacity=".6"/>
+        <!-- gauge (0-500 to scale) -->
+        <path d="M212.0 200.0 A78 78 0 0 1 215.7 176.4" fill="none" style="stroke:var(--g1)" stroke-width="16"/><path d="M216.0 175.4 A78 78 0 0 1 226.6 154.6" fill="none" style="stroke:var(--g2)" stroke-width="16"/><path d="M227.2 153.8 A78 78 0 0 1 265.4 126.0" fill="none" style="stroke:var(--g3)" stroke-width="16"/><path d="M266.4 125.7 A78 78 0 0 1 313.6 125.7" fill="none" style="stroke:var(--g4)" stroke-width="16"/><path d="M314.6 126.0 A78 78 0 0 1 352.8 153.8" fill="none" style="stroke:var(--g5)" stroke-width="16"/><path d="M353.4 154.6 A78 78 0 0 1 368.0 200.0" fill="none" style="stroke:var(--g6)" stroke-width="16"/><line x1="290" y1="200" x2="311.9" y2="148.5" style="stroke:var(--muted)" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 4"/><line x1="290" y1="200" x2="340.4" y2="175.5" style="stroke:var(--ink)" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="290" cy="200" r="6" style="fill:var(--ink)"/>
+        <text x="327" y="104" text-anchor="middle" font-size="12" font-weight="600" style="fill:var(--muted)">314</text>
+        <text x="372" y="150" text-anchor="middle" font-size="14" font-weight="700" style="fill:var(--ink)">428</text>
+        <text x="290" y="226" text-anchor="middle" font-size="11" font-weight="600" letter-spacing="1.2" style="fill:var(--ink)">DELHI AQI</text>
+        <text x="290" y="242" text-anchor="middle" font-size="10.5" style="fill:var(--muted)">Thu 314 → Fri 428 (forecast)</text>
+        <text x="20" y="34" font-size="12" font-weight="600" letter-spacing="1.5" style="fill:var(--ink)">HEADING FOR ‘SEVERE’</text>
+        <text x="20" y="52" font-size="11" style="fill:var(--muted)">Weak winds, stubble smoke</text>
+      </svg><figcaption>Illustration: Pringital News</figcaption></figure>
         <p class="copy"><span class="dl">NEW DELHI:</span> Delhi’s air quality index stood at 314 on Thursday morning, and the Indian Institute of Tropical Meteorology expects it to reach 428, in the ‘severe’ band, by Friday. Weak winds, a falling mixing height and stubble smoke from neighbouring states are trapping pollutants over the city, while the share of firecrackers in PM2.5 has dropped to 7.4% from 29.8% on Tuesday. <mark class="dnhl"><a href="https://www.outlookindia.com/national/delhi-aqi-today-november-12-2026-air-pollution-pm25-firecracker-pollution-stubble-burning-severe-aqi-forecast" target="_blank" rel="noopener"><span class="dn">DN</span>Full story</a></mark></p>
           <ul class="more">
             <li><h3><a href="https://www.dynamitenews.com/national/imd-weather-update-today-november-12-delhi-forecast-india" target="_blank" rel="noopener">Delhi stays dry; highs near 30°C</a><a class="dn" href="https://www.dynamitenews.com/national/imd-weather-update-today-november-12-delhi-forecast-india" target="_blank" rel="noopener">DN</a></h3><p>IMD sees clear skies and light haze, lows near 17°C, while rain and storms hit several states.</p></li>
