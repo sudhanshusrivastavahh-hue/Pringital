@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Pringital News · Today</title>
+<meta name="description" content="Pringital News, New Delhi edition: the day’s news in four minutes. Trust Like Print. Speed Like Digital.">
+<style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@500;700;800&display=swap">
+<style>
+/* Layout: fixed A4 sheet (794 x 1123) scaled to fit; masthead; 3 columns (Nation+Business | single story + 3-col lead, Delhi-NCR second lead, 4-col band | World+Bollywood); bottom: square ad + house story; imprint. Deliberately single newsprint theme. */
+:root{
+  color-scheme:light;
+  --desk:#e9e7e2; --paper:#ffffff; --ink:#141414; --ink-2:#333333; --ink-3:#555555; --hair:#cfcfcf;
+  --red:#c4121c; --red-wash:#fde8e9; --hl:#ffe45c; --blue:#0b3d91;
+  --display:"Playfair Display", Georgia, "Times New Roman", serif;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:Inter, "Helvetica Neue", Arial, sans-serif;
+}
+*{box-sizing:border-box}
+body{background:var(--desk);color:var(--ink);margin:0;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:20px}
+#fit{width:100%;max-width:794px;margin:0 auto;overflow:hidden}
+.page{width:794px;min-height:1123px;transform-origin:0 0;background:var(--paper);box-shadow:0 16px 40px -24px rgba(0,0,0,.45);
+  padding:22px 26px 16px;display:flex;flex-direction:column;gap:8px;font-family:var(--serif)}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible{outline:2px solid var(--red);outline-offset:1px}
+h1,h2,h3,p,ul,ol{margin:0}
+ul,ol{list-style:none;padding:0}
+
+/* masthead */
+.top{display:flex;justify-content:space-between;align-items:center;font-family:var(--sans);font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.top .r{color:var(--red)}
+.mast{border-top:3px solid var(--ink);border-bottom:1px solid var(--ink);padding:5px 0 3px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.ear{width:132px;flex:none;font-family:var(--sans);font-size:8.5px;line-height:1.35;color:var(--ink-2)}
+.ear strong{display:block;font-size:9px;letter-spacing:.08em;color:var(--ink)}
+.ear.l{display:flex;align-items:center;gap:7px}
+.ear.r{text-align:right}
+.mast h1{font-family:var(--display);font-weight:900;font-size:46px;line-height:1;letter-spacing:-.01em;text-align:center;flex:1;white-space:nowrap}
+.mast h1 span{color:var(--red)}
+.logoline{display:flex;justify-content:center;align-items:center;gap:12px;border-bottom:3px double var(--ink);padding-bottom:4px;
+  font-family:var(--display);font-style:italic;font-weight:700;font-size:17px}
+.logoline .b{color:var(--blue)} .logoline .rd{color:var(--red)}
+.logoline i{width:5px;height:5px;background:var(--ink);transform:rotate(45deg);display:block}
+
+.listen{width:150px;flex:none;display:flex;align-items:center;gap:7px;padding:6px 7px;border:2px solid var(--red);border-radius:8px;background:var(--red-wash);text-decoration:none !important;color:var(--ink)}
+.listen:hover{background:#fbd3d6}
+.lplay{width:32px;height:32px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;flex:none}
+.ltxt{display:flex;flex-direction:column;gap:1px;min-width:0}
+.ltxt .l1{font-family:var(--sans);font-size:9px;font-weight:800;letter-spacing:.12em;color:var(--red)}
+.ltxt .l2{font-family:var(--display);font-style:italic;font-weight:900;font-size:14.5px;line-height:1.05;white-space:nowrap}
+.ltxt .l3{display:flex;align-items:center;font-family:var(--sans);font-size:8px;font-weight:800;color:var(--red);margin-top:2px}
+/* DN */
+.dn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--sans);font-size:6.3px;font-weight:800;
+  width:14px;height:14px;border-radius:50%;background:var(--red);color:#fff;text-decoration:none !important;vertical-align:1px;margin-left:3px}
+.dn:hover{background:var(--ink)}
+mark.dnhl{background:var(--hl);padding:0 2px;white-space:nowrap}
+mark.dnhl a{font-family:var(--sans);font-size:8.5px;font-weight:800;color:var(--ink)}
+mark.dnhl .dn{margin:0 3px 0 0}
+
+/* columns */
+.main{display:grid;grid-template-columns:136px minmax(0,1fr) 136px}
+.side.l{padding-right:9px;border-right:1px solid var(--ink)}
+.side.r{padding-left:9px;border-left:1px solid var(--ink)}
+.boxhead{background:var(--ink);color:#fff;text-align:center;padding:2px 0;font-family:var(--sans);font-size:9px;font-weight:800;letter-spacing:.16em}
+.boxhead.sub{margin-top:6px;background:var(--red)}
+.side li{border-top:1px solid var(--hair);padding:3px 0 3px;font-family:var(--serif);font-weight:700;font-size:10.2px;line-height:1.18}
+.side li:first-child{border-top:0}
+.k{font-family:var(--sans);font-size:7px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-right:3px}
+
+.center{padding:0 11px;display:flex;flex-direction:column;gap:7px;min-width:0}
+.kick{font-family:var(--sans);font-size:7.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--red);display:block}
+.copy{font-size:10.2px;line-height:1.34;text-align:justify;hyphens:auto;color:var(--ink-2)}
+.dl{font-weight:700;color:var(--ink)}
+
+/* top block: single story + 3-col lead */
+.topblock{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:10px}
+.single{border-right:1px solid var(--hair);padding-right:9px;display:flex;flex-direction:column;gap:3px}
+.single h2{font-family:var(--display);font-weight:900;font-size:15px;line-height:1.08}
+.single .copy{text-align:left;hyphens:auto}
+.lead{grid-column:span 3;display:flex;flex-direction:column;gap:4px}
+.lead h2{font-family:var(--display);font-weight:900;font-size:24px;line-height:1.04;letter-spacing:-.01em}
+.leadrow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:10px}
+.leadrow figure{margin:0;display:flex;flex-direction:column;gap:2px}
+.leadrow svg{display:block;width:100%;height:auto;border:1px solid var(--ink)}
+figcaption{font-family:var(--sans);font-size:7px;color:var(--ink-3)}
+.leadrow .copy{grid-column:span 2;columns:2;column-gap:10px}
+
+.leadflow .copy{text-align:left}
+.leadflow{columns:3;column-gap:10px;column-rule:1px solid var(--hair)}
+.leadflow figure{margin:0 0 5px;break-inside:avoid;display:flex;flex-direction:column;gap:2px}
+.leadflow svg{display:block;width:100%;height:auto;border:1px solid var(--ink)}
+/* second lead */
+.second{border-top:2px solid var(--ink);padding-top:5px;display:grid;grid-template-columns:minmax(0,1.9fr) minmax(0,1fr);column-gap:10px}
+.second .head{grid-column:1 / -1;margin-bottom:3px}
+.second h2{font-family:var(--display);font-weight:700;font-size:20px;line-height:1.06;margin-top:1px}
+.pointers{background:var(--red-wash);border-top:3px solid var(--red);padding:4px 7px}
+.pointers .ph{font-family:var(--sans);font-size:7.5px;font-weight:800;letter-spacing:.12em;color:var(--red);margin-bottom:2px}
+.pointers li{font-family:var(--serif);font-weight:700;font-size:9.6px;line-height:1.2;padding:2px 0 2px 9px;position:relative;border-top:1px solid #f1c9cc}
+.pointers li:first-child{border-top:0}
+.pointers li::before{content:"";position:absolute;left:0;top:6px;border-left:5px solid var(--red);border-top:3px solid transparent;border-bottom:3px solid transparent}
+
+.cityl{display:flex;flex-direction:column;gap:5px}
+.more{display:grid;grid-template-columns:1fr 1fr;column-gap:10px;border-top:1px solid var(--hair);padding-top:4px}
+.more li+li{border-left:1px solid var(--hair);padding-left:9px}
+.more h3{font-family:var(--serif);font-weight:700;font-size:10.4px;line-height:1.17}
+.more p{font-size:8.8px;line-height:1.28;color:var(--ink-3);margin-top:1px}
+/* 4-col band */
+.band{border-top:1px solid var(--ink);padding-top:5px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.band section{padding:0 7px;border-left:1px solid var(--hair);min-width:0}
+.band section:first-child{padding-left:0;border-left:0}
+.band section:last-child{padding-right:0}
+.band .sec{font-family:var(--sans);font-size:7.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--red);border-bottom:2px solid var(--ink);padding-bottom:2px;margin-bottom:2px}
+.band li{padding:3px 0;border-bottom:1px solid var(--hair)}
+.band li:last-child{border-bottom:0}
+.band h3{font-family:var(--serif);font-weight:700;font-size:9.8px;line-height:1.17}
+.band p{font-size:8.4px;line-height:1.24;color:var(--ink-3);margin-top:1px}
+
+.duo{border-top:2px solid var(--ink);padding-top:5px;display:grid;grid-template-columns:1fr 1fr;column-gap:10px}
+.duo article:nth-child(even){border-left:1px solid var(--hair);padding-left:9px}
+.duo article.wide{grid-column:1 / -1;border-left:0;padding-left:0}
+.duo article:nth-child(n+3){border-top:1px solid var(--hair);margin-top:4px;padding-top:4px}
+.duo h3{font-family:var(--display);font-weight:900;font-size:15px;line-height:1.12}
+.duo p{font-size:9px;line-height:1.28;color:var(--ink-3);margin-top:1px}
+.ent{border-top:3px double var(--ink);padding-top:5px}
+.enthead{background:var(--ink);color:#fff;text-align:center;padding:2px 0;font-family:var(--sans);font-size:9px;font-weight:800;letter-spacing:.16em;margin-bottom:5px}
+.entgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.entcol{padding:0 9px;border-left:1px solid var(--hair);display:flex;flex-direction:column;gap:4px}
+.entcol:first-child{padding-left:0;border-left:0}
+.entcol:last-child{padding-right:0}
+.entcol .sec{font-family:var(--sans);font-size:7.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--red);border-bottom:2px solid var(--ink);padding-bottom:2px}
+.entcol article+article{border-top:1px solid var(--hair);padding-top:4px}
+.entcol h3{font-family:var(--display);font-weight:900;font-size:13px;line-height:1.12}
+.entcol p{font-size:9px;line-height:1.3;color:var(--ink-3);margin-top:1px}
+/* bottom */
+.bottom{border-top:3px double var(--ink);padding-top:7px;display:grid;grid-template-columns:150px minmax(0,1fr);gap:14px;align-items:start}
+.ad{position:relative;width:150px;height:150px;color:#fff;overflow:hidden;
+  background:linear-gradient(135deg,var(--blue) 0 55%,var(--red) 55% 100%);padding:12px 11px;display:flex;flex-direction:column;justify-content:space-between}
+.ad .advt{position:absolute;top:3px;right:5px;font-family:var(--sans);font-size:6px;letter-spacing:.14em;opacity:.85}
+.ad .tag{font-family:var(--display);font-weight:900;font-size:15.5px;line-height:1.1}
+.ad .tag em{display:block;font-style:italic;font-weight:700}
+.ad .sub{font-family:var(--sans);font-size:7px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;line-height:1.35}
+.ad .adlogo{display:flex;align-items:center;gap:6px;font-family:var(--display);font-weight:900;font-size:15px;line-height:.95}
+.ad .url{font-family:var(--sans);font-size:7.5px;font-weight:800;letter-spacing:.06em;align-self:flex-end;background:#fff;color:var(--red);padding:2px 6px;border-radius:8px}
+.house h2{font-family:var(--display);font-weight:900;font-size:22px;line-height:1.05;margin:1px 0 5px}
+.house h2 .b{color:var(--blue)} .house h2 .rd{color:var(--red)}
+.house .cols{columns:3;column-gap:12px;column-rule:1px solid var(--hair);font-size:9.8px;line-height:1.36;text-align:left;hyphens:auto;color:var(--ink-2)}
+.house .cols p+p{margin-top:4px}
+
+.imprint{border-top:3px double var(--ink);padding-top:4px;display:flex;justify-content:space-between;align-items:center;gap:10px;
+  font-family:var(--sans);font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.imprint .who span{color:var(--red)}
+.imprint .m{font-weight:600;color:var(--ink-3);font-size:8px}
+</style>
+
+<div id="fit">
+<div class="page" id="page">
+
+  <div class="top">
+    <span>Thursday, 12 November 2026</span>
+    <span class="r">● Updated 6:15 PM IST</span>
+    <span>New Delhi Edition · <a href="/archive/" style="color:inherit;text-decoration:underline">Archive</a></span>
+  </div>
+
+  <header class="mast">
+    <a class="listen" href="/bulletin/" aria-label="Now listen to the Pringital News bulletin">
+      <span class="lplay" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M8 5l11 7-11 7z" fill="#ffffff"/></svg></span>
+      <span class="ltxt"><span class="l1">NOW LISTEN</span><span class="l2">Pringital News</span><span class="l3"><span class="dn" style="margin:0 3px 0 0">DN</span>4-min bulletin</span></span>
+    </a>
+    <h1>PRINGITAL <span>NEWS</span></h1>
+    <div class="ear r"><strong>PRINT + DIGITAL</strong>Tap <span class="dn" style="margin:0 1px">DN</span> for the detailed story</div>
+  </header>
+  <div class="logoline" aria-label="Trust Like Print. Speed Like Digital."><span class="b">Trust Like Print.</span><i></i><span class="rd">Speed Like Digital.</span></div>
+
+  <main class="main">
+
+    <!-- LEFT: NATION 75% + BUSINESS -->
+    <aside class="side l">
+      <div class="boxhead">NATION</div>
+      <ul>
+        <li><span class="k">Cabinet</span><a href="https://indianopinion.org/cabinet-approves-rs-3230-crore-for-yuge-yugeen-bharat-museum/" target="_blank" rel="noopener">₹3,230 cr for museum in North, South Block</a><a class="dn" href="https://indianopinion.org/cabinet-approves-rs-3230-crore-for-yuge-yugeen-bharat-museum/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">PM</span><a href="https://ommcomnews.com/india-news/viksit-bharat-goal-within-reach-2047-not-a-deadline-to-wait-for-pm-modi/" target="_blank" rel="noopener">Viksit Bharat within reach, says Modi</a><a class="dn" href="https://ommcomnews.com/india-news/viksit-bharat-goal-within-reach-2047-not-a-deadline-to-wait-for-pm-modi/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Mysuru</span><a href="https://indianopinion.org/spg-takes-over-mysuru-planetarium-ahead-of-pm-modis-visit/" target="_blank" rel="noopener">SPG takes over venue before PM’s visit</a><a class="dn" href="https://indianopinion.org/spg-takes-over-mysuru-planetarium-ahead-of-pm-modis-visit/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">J&amp;K</span><a href="https://indianopinion.org/two-crpf-men-injured-in-terror-attack-in-jks-kulgam/" target="_blank" rel="noopener">CRPF men hurt in Kulgam naka firing</a><a class="dn" href="https://indianopinion.org/two-crpf-men-injured-in-terror-attack-in-jks-kulgam/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">J&amp;K</span><a href="https://indianopinion.org/2-spos-missing-after-firing-in-jk-kishtwar-search-underway/" target="_blank" rel="noopener">Kishtwar: bodies of 2 missing SPOs found</a><a class="dn" href="https://indianopinion.org/2-spos-missing-after-firing-in-jk-kishtwar-search-underway/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Security</span><a href="https://ommcomnews.com/india-news/kra-emerges-as-lashkars-new-shield-against-security-agencies-in-kashmir/" target="_blank" rel="noopener">KRA emerges as Lashkar’s new shield</a><a class="dn" href="https://ommcomnews.com/india-news/kra-emerges-as-lashkars-new-shield-against-security-agencies-in-kashmir/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">J&amp;K</span><a href="https://ommcomnews.com/india-news/terrorism-will-never-succeed-in-kashmir-pakistan-must-shun-terror-farooq-abdullah/" target="_blank" rel="noopener">Terror will never win in Kashmir: Farooq</a><a class="dn" href="https://ommcomnews.com/india-news/terrorism-will-never-succeed-in-kashmir-pakistan-must-shun-terror-farooq-abdullah/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Aviation</span><a href="https://ommcomnews.com/india-news/air-india-passenger-held-over-hoax-hijack-threat-on-kolkata-mumbai-flight/" target="_blank" rel="noopener">Flyer held over hoax hijack note</a><a class="dn" href="https://ommcomnews.com/india-news/air-india-passenger-held-over-hoax-hijack-threat-on-kolkata-mumbai-flight/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Railways</span><a href="https://indianopinion.org/chauri-chaura-express-derails-at-kanpur-central-no-injuries/" target="_blank" rel="noopener">Express derails at Kanpur; none hurt</a><a class="dn" href="https://indianopinion.org/chauri-chaura-express-derails-at-kanpur-central-no-injuries/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Probe</span><a href="https://indianopinion.org/india-blocked-129-betting-sites-on-two-fake-high-court-orders/" target="_blank" rel="noopener">129 sites blocked on fake court orders</a><a class="dn" href="https://indianopinion.org/india-blocked-129-betting-sites-on-two-fake-high-court-orders/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">EC</span><a href="https://indianopinion.org/uttar-pradesh-voters-can-file-form-6-without-fear-of-action/" target="_blank" rel="noopener">UP voters off rolls can use Form-6</a><a class="dn" href="https://indianopinion.org/uttar-pradesh-voters-can-file-form-6-without-fear-of-action/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Ayodhya</span><a href="https://indianopinion.org/congress-seeks-supreme-court-monitored-probe-into-ayodhya-temple-donation-theft/" target="_blank" rel="noopener">Cong seeks SC probe into donation theft</a><a class="dn" href="https://indianopinion.org/congress-seeks-supreme-court-monitored-probe-into-ayodhya-temple-donation-theft/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">UP</span><a href="https://indianopinion.org/yogi-slams-akhilesh-over-infiltrator-remark-on-uttarakhand-residents/" target="_blank" rel="noopener">Yogi slams Akhilesh’s ‘infiltrator’ jibe</a><a class="dn" href="https://indianopinion.org/yogi-slams-akhilesh-over-infiltrator-remark-on-uttarakhand-residents/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Telangana</span><a href="https://indianopinion.org/revanth-reddy-attacks-bjp-brs-on-minorities-day-speech/" target="_blank" rel="noopener">Revanth attacks BRS, BJP on quota</a><a class="dn" href="https://indianopinion.org/revanth-reddy-attacks-bjp-brs-on-minorities-day-speech/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Kerala</span><a href="https://ommcomnews.com/india-news/e20-concerns-cm-satheesan-promises-strict-action-against-violators/" target="_blank" rel="noopener">CM vows action on E20 fuel violators</a><a class="dn" href="https://ommcomnews.com/india-news/e20-concerns-cm-satheesan-promises-strict-action-against-violators/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Odisha</span><a href="https://enewsinsight.com/odisha-bags-national-honours-at-swachh-survekshan-awards-2025-26/" target="_blank" rel="noopener">Odisha bags Swachh Survekshan honours</a><a class="dn" href="https://enewsinsight.com/odisha-bags-national-honours-at-swachh-survekshan-awards-2025-26/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Prize</span><a href="https://theprint.in/india/six-researchers-win-infosys-prize-2026/3096855/" target="_blank" rel="noopener">Six researchers win Infosys Prize 2026</a><a class="dn" href="https://theprint.in/india/six-researchers-win-infosys-prize-2026/3096855/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Haryana</span><a href="https://indianopinion.org/haryana-extends-contractual-staff-engagement-to-31-december/" target="_blank" rel="noopener">Contract staff tenure extended to 31 Dec</a><a class="dn" href="https://indianopinion.org/haryana-extends-contractual-staff-engagement-to-31-december/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Army</span><a href="https://indianopinion.org/army-chief-jointness-integration-critical-for-future-warfighting/" target="_blank" rel="noopener">Jointness key to future wars: Army chief</a><a class="dn" href="https://indianopinion.org/army-chief-jointness-integration-critical-for-future-warfighting/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">RSS</span><a href="https://indianopinion.org/india-should-offer-world-new-development-model-rss-chief-bhagwat/" target="_blank" rel="noopener">India must offer world new model: Bhagwat</a><a class="dn" href="https://indianopinion.org/india-should-offer-world-new-development-model-rss-chief-bhagwat/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Congress</span><a href="https://indianopinion.org/pitroda-says-stop-discussing-1984-riots-calls-for-moving-on/" target="_blank" rel="noopener">Pitroda: stop discussing 1984 riots</a><a class="dn" href="https://indianopinion.org/pitroda-says-stop-discussing-1984-riots-calls-for-moving-on/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Cricket</span><a href="https://indianopinion.org/new-zealand-call-up-brett-randell-for-final-two-odis-against-india/" target="_blank" rel="noopener">NZ call up Randell for last two ODIs</a><a class="dn" href="https://indianopinion.org/new-zealand-call-up-brett-randell-for-final-two-odis-against-india/" target="_blank" rel="noopener">DN</a></li>
+      </ul>
+      <div class="boxhead sub">BUSINESS</div>
+      <ul>
+        <li><span class="k">Outlook</span><a href="https://www.business-standard.com/amp/economy/news/moody-s-retains-india-s-fy27-growth-forecast-at-7-on-resilient-demand-126111101341_1.html" target="_blank" rel="noopener">Moody’s keeps FY27 growth at 7%</a><a class="dn" href="https://www.business-standard.com/amp/economy/news/moody-s-retains-india-s-fy27-growth-forecast-at-7-on-resilient-demand-126111101341_1.html" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">GDP</span><a href="https://www.businesstoday.in/latest/economy/story/indias-gdp-growth-to-beat-rbi-forecast-sbi-sees-7-8-expansion-in-q2-moodys-raises-fy27-outlook-566844-2026-11-11" target="_blank" rel="noopener">SBI sees 7.8% growth in Q2</a><a class="dn" href="https://www.businesstoday.in/latest/economy/story/indias-gdp-growth-to-beat-rbi-forecast-sbi-sees-7-8-expansion-in-q2-moodys-raises-fy27-outlook-566844-2026-11-11" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Markets</span><a href="https://www.business-standard.com/amp/markets/news/stock-market-live-november-12-gift-nifty-nse-bse-sensex-today-nifty50-crude-oil-prices-q2-results-today-126111200066_1.html" target="_blank" rel="noopener">Sensex ends flat at 81,911; realty up 4%</a><a class="dn" href="https://www.business-standard.com/amp/markets/news/stock-market-live-november-12-gift-nifty-nse-bse-sensex-today-nifty50-crude-oil-prices-q2-results-today-126111200066_1.html" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Prices</span><a href="https://www.businesstoday.in/india/story/amul-milk-gets-costlier-from-thursday-prices-rise-by-rs-2-4-per-litre-across-india-566933-2026-11-11" target="_blank" rel="noopener">Amul milk up ₹2–4 a litre</a><a class="dn" href="https://www.businesstoday.in/india/story/amul-milk-gets-costlier-from-thursday-prices-rise-by-rs-2-4-per-litre-across-india-566933-2026-11-11" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Banking</span><a href="https://indianopinion.org/rbi-consolidates-domestic-money-transfer-rules-sets-transaction-limits/" target="_blank" rel="noopener">RBI issues new money-transfer rules</a><a class="dn" href="https://indianopinion.org/rbi-consolidates-domestic-money-transfer-rules-sets-transaction-limits/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Jobs</span><a href="https://www.businesstoday.in/bt-tv/whats-hot/video/indias-jobless-rate-falls-to-5-1-but-why-is-urban-youth-unemployment-rising-to-18-9-566856-2026-11-11" target="_blank" rel="noopener">Jobless rate 5.1%; urban youth 18.9%</a><a class="dn" href="https://www.businesstoday.in/bt-tv/whats-hot/video/indias-jobless-rate-falls-to-5-1-but-why-is-urban-youth-unemployment-rising-to-18-9-566856-2026-11-11" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">IPO</span><a href="https://indianopinion.org/haldiram-starts-ipo-process-eyes-rs-10000-crore-float-in-2027/" target="_blank" rel="noopener">Haldiram starts ₹10,000 cr IPO process</a><a class="dn" href="https://indianopinion.org/haldiram-starts-ipo-process-eyes-rs-10000-crore-float-in-2027/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Exports</span><a href="https://indianopinion.org/electronics-exports-surge-44-to-31-9-billion-in-april-september/" target="_blank" rel="noopener">Electronics exports jump 44% to $31.9 bn</a><a class="dn" href="https://indianopinion.org/electronics-exports-surge-44-to-31-9-billion-in-april-september/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Tech</span><a href="https://indianopinion.org/openai-launches-local-ai-processing-in-india-for-gpt-6-luna/" target="_blank" rel="noopener">OpenAI starts local AI processing in India</a><a class="dn" href="https://indianopinion.org/openai-launches-local-ai-processing-in-india-for-gpt-6-luna/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Results</span><a href="https://indianopinion.org/grse-net-profit-rises-12-in-q2-brokerages-split-on-outlook/" target="_blank" rel="noopener">GRSE Q2 profit rises 12%</a><a class="dn" href="https://indianopinion.org/grse-net-profit-rises-12-in-q2-brokerages-split-on-outlook/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Stocks</span><a href="https://indianopinion.org/lemon-tree-shares-jump-7-as-brokerages-see-up-to-42-upside/" target="_blank" rel="noopener">Lemon Tree shares jump 7% after Q2</a><a class="dn" href="https://indianopinion.org/lemon-tree-shares-jump-7-as-brokerages-see-up-to-42-upside/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Funds</span><a href="https://indianopinion.org/focused-funds-capped-at-30-stocks-but-other-schemes-also-concentrate-holdings/" target="_blank" rel="noopener">Not only focused funds bet on few stocks</a><a class="dn" href="https://indianopinion.org/focused-funds-capped-at-30-stocks-but-other-schemes-also-concentrate-holdings/" target="_blank" rel="noopener">DN</a></li>
+      </ul>
+    </aside>
+
+    <!-- CENTER -->
+    <section class="center">
+      <div class="topblock">
+        <article class="single">
+          <span class="kick">Farmers</span>
+          <h2><a href="https://newsonair.gov.in/govt-approves-nutrient-based-subsidy-for-rabi-2026-27-to-ensure-affordable-fertilisers-for-farmers/" target="_blank" rel="noopener">₹62,370 Crore Fertiliser Subsidy for Rabi Season</a></h2>
+          <p class="copy"><span class="dl">NEW DELHI:</span> The Union Cabinet has approved Nutrient Based Subsidy rates for P&amp;K fertilisers for Rabi 2026-27: about ₹62,370 crore, ₹24,417 crore more than last Rabi. It covers 1 October to 31 March. <mark class="dnhl"><a href="https://newsonair.gov.in/govt-approves-nutrient-based-subsidy-for-rabi-2026-27-to-ensure-affordable-fertilisers-for-farmers/" target="_blank" rel="noopener"><span class="dn">DN</span>Full story</a></mark></p>
+        </article>
+
+        <article class="lead">
+          <span class="kick">Lead · Economy</span>
+          <h2><a href="https://theprint.in/economy/retail-inflation-rises-to-two-year-high-of-6-09-pc-in-oct-breaches-rbis-upper-limit/3097042/" target="_blank" rel="noopener">Inflation Hits 2-Year High of 6.09%, Breaks RBI Limit</a></h2>
+          <div class="leadflow">
+            <figure>
+              <svg viewBox="0 0 120 130" role="img" aria-label="Illustration: a vegetable basket with a rising red arrow">
+                <rect width="120" height="130" fill="#f4f2ed"/>
+                <path d="M14 112 L40 82 L62 94 L104 40" fill="none" stroke="#c4121c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M92 36 L108 34 L106 50 Z" fill="#c4121c"/>
+                <circle cx="38" cy="70" r="11" fill="#d8352b"/><path d="M34 60 q4 -4 8 0" fill="none" stroke="#2f7a3a" stroke-width="2.5"/>
+                <circle cx="58" cy="72" r="10" fill="#b65c86"/>
+                <path d="M74 64 q8 -10 14 0 q-7 14 -14 0 Z" fill="#2f7a3a"/>
+                <path d="M22 76 H96 L88 112 H30 Z" fill="#c9a26a" stroke="#141414" stroke-width="1.2"/>
+                <path d="M30 86 H90 M32 96 H88 M34 104 H86" stroke="#8f6f43" stroke-width="1.2"/>
+                <rect x="6" y="6" width="58" height="22" fill="#ffffff" stroke="#141414" stroke-width=".8"/>
+                <text x="10" y="15" font-family="Inter, sans-serif" font-size="6" font-weight="800" fill="#555555">CPI · OCTOBER</text>
+                <text x="10" y="25" font-family="Playfair Display, serif" font-size="10" font-weight="900" fill="#c4121c">6.09%</text>
+              </svg>
+              <figcaption>Illustration: Pringital News</figcaption>
+            </figure>
+            <p class="copy"><span class="dl">NEW DELHI:</span> Retail inflation rose to 6.09% in October from 5.54% in September, data released on Thursday showed, crossing the Reserve Bank’s 6% upper tolerance limit for the first time since October 2024. Food inflation climbed to 8.94% from 7.74% as vegetable and grain prices rose after a deficient monsoon. The reading sets the stage for the RBI’s monetary policy meeting on 2–4 December, where several economists expect a rate hike of 50 to 75 basis points over the coming months, which would push up loan EMIs. Growth remains firm, with SBI Research projecting 7.8% for the July–September quarter. <mark class="dnhl"><a href="https://theprint.in/economy/retail-inflation-rises-to-two-year-high-of-6-09-pc-in-oct-breaches-rbis-upper-limit/3097042/" target="_blank" rel="noopener"><span class="dn">DN</span>Full story</a></mark></p>
+          </div>
+        </article>
+      </div>
+
+      <article class="second">
+        <div class="head">
+          <span class="kick">Second Lead · Delhi–NCR</span>
+          <h2><a href="https://www.outlookindia.com/national/delhi-aqi-today-november-12-2026-air-pollution-pm25-firecracker-pollution-stubble-burning-severe-aqi-forecast" target="_blank" rel="noopener">Capital Braces for ‘Severe’ Air as AQI Heads to 428</a></h2>
+        </div>
+        <div class="cityl">
+        <p class="copy"><span class="dl">NEW DELHI:</span> Delhi’s air quality index stood at 314 on Thursday morning, and the Indian Institute of Tropical Meteorology expects it to reach 428, in the ‘severe’ band, by Friday. Weak winds, a falling mixing height and stubble smoke from neighbouring states are trapping pollutants over the city, while the share of firecrackers in PM2.5 has dropped to 7.4% from 29.8% on Tuesday. <mark class="dnhl"><a href="https://www.outlookindia.com/national/delhi-aqi-today-november-12-2026-air-pollution-pm25-firecracker-pollution-stubble-burning-severe-aqi-forecast" target="_blank" rel="noopener"><span class="dn">DN</span>Full story</a></mark></p>
+          <ul class="more">
+            <li><h3><a href="https://www.dynamitenews.com/national/imd-weather-update-today-november-12-delhi-forecast-india" target="_blank" rel="noopener">Delhi stays dry; highs near 30°C</a><a class="dn" href="https://www.dynamitenews.com/national/imd-weather-update-today-november-12-delhi-forecast-india" target="_blank" rel="noopener">DN</a></h3><p>IMD sees clear skies and light haze, lows near 17°C, while rain and storms hit several states.</p></li>
+            <li><h3><a href="https://www.delhinewslive.com/travel/northern-railway-to-run-new-delhi-darbhanga-reserved-festival-special-trains-on-november-12-and-14/" target="_blank" rel="noopener">Festival specials to Darbhanga</a><a class="dn" href="https://www.delhinewslive.com/travel/northern-railway-to-run-new-delhi-darbhanga-reserved-festival-special-trains-on-november-12-and-14/" target="_blank" rel="noopener">DN</a></h3><p>Northern Railway runs reserved trains from New Delhi on 12 and 14 November.</p></li>
+          </ul>
+        </div>
+        <div class="pointers">
+          <div class="ph">ALSO IN DELHI–NCR</div>
+          <ul>
+            <li><a href="https://indianopinion.org/assistant-manager-shot-dead-in-road-rage-on-sonipat-expressway/" target="_blank" rel="noopener">Man shot dead in Sonipat road rage</a><a class="dn" href="https://indianopinion.org/assistant-manager-shot-dead-in-road-rage-on-sonipat-expressway/" target="_blank" rel="noopener">DN</a></li>
+            <li><a href="https://indianopinion.org/noida-ghaziabad-schools-switch-to-hybrid-mode-for-classes-up-to-class-5/" target="_blank" rel="noopener">Noida, Ghaziabad schools go hybrid</a><a class="dn" href="https://indianopinion.org/noida-ghaziabad-schools-switch-to-hybrid-mode-for-classes-up-to-class-5/" target="_blank" rel="noopener">DN</a></li>
+            <li><a href="https://indianopinion.org/gurugram-bans-coal-and-wood-tandoors-at-eateries-under-grap-norms/" target="_blank" rel="noopener">Gurugram bans coal, wood tandoors</a><a class="dn" href="https://indianopinion.org/gurugram-bans-coal-and-wood-tandoors-at-eateries-under-grap-norms/" target="_blank" rel="noopener">DN</a></li>
+            <li><a href="https://www.delhinewslive.com/delhi/delhi-traffic-police-advisory-restrictions-and-diversions-in-central-delhi-on-november-12-between-11-30-am-and-1-30-pm/" target="_blank" rel="noopener">Traffic curbs on 11 central stretches</a><a class="dn" href="https://www.delhinewslive.com/delhi/delhi-traffic-police-advisory-restrictions-and-diversions-in-central-delhi-on-november-12-between-11-30-am-and-1-30-pm/" target="_blank" rel="noopener">DN</a></li>
+            <li><a href="https://www.delhinewslive.com/delhi/ndmc-secures-second-rank-in-swachh-shehar-category-for-cities-of-50000-to-3-lakh-in-swachh-survekshan-2025-26/" target="_blank" rel="noopener">NDMC second in Swachh Survekshan</a><a class="dn" href="https://www.delhinewslive.com/delhi/ndmc-secures-second-rank-in-swachh-shehar-category-for-cities-of-50000-to-3-lakh-in-swachh-survekshan-2025-26/" target="_blank" rel="noopener">DN</a></li>
+            <li><a href="https://indianopinion.org/kejriwal-death-threat-punjab-police-probe-finds-it-hoax-says-report/" target="_blank" rel="noopener">Kejriwal death threat a hoax: report</a><a class="dn" href="https://indianopinion.org/kejriwal-death-threat-punjab-police-probe-finds-it-hoax-says-report/" target="_blank" rel="noopener">DN</a></li>
+          </ul>
+        </div>
+      </article>
+
+      <div class="band">
+        <section>
+          <div class="sec">States</div>
+          <ul>
+            <li><h3><a href="https://indianopinion.org/navi-mumbai-tops-cleanliness-survey-indore-falls-off-list/" target="_blank" rel="noopener">Navi Mumbai cleanest city</a><a class="dn" href="https://indianopinion.org/navi-mumbai-tops-cleanliness-survey-indore-falls-off-list/" target="_blank" rel="noopener">DN</a></h3><p>Surat, Vijayawada next; Indore off the list.</p></li>
+            <li><h3><a href="https://indianopinion.org/karnataka-moves-supreme-court-against-quota-hike-verdict/" target="_blank" rel="noopener">Karnataka moves SC on quota</a><a class="dn" href="https://indianopinion.org/karnataka-moves-supreme-court-against-quota-hike-verdict/" target="_blank" rel="noopener">DN</a></h3><p>HC had struck down SC/ST hike.</p></li>
+            <li><h3><a href="https://indianopinion.org/tamil-nadu-cm-orders-extra-rs-5-25-crore-sterlite-relief/" target="_blank" rel="noopener">₹5.25 cr more Sterlite relief</a><a class="dn" href="https://indianopinion.org/tamil-nadu-cm-orders-extra-rs-5-25-crore-sterlite-relief/" target="_blank" rel="noopener">DN</a></h3><p>For families of 2018 firing victims.</p></li>
+            <li><h3><a href="https://ommcomnews.com/india-news/thiruvananthapuram-corporation-looks-to-gujarat-for-urban-makeover/" target="_blank" rel="noopener">Thiruvananthapuram eyes Gujarat model</a><a class="dn" href="https://ommcomnews.com/india-news/thiruvananthapuram-corporation-looks-to-gujarat-for-urban-makeover/" target="_blank" rel="noopener">DN</a></h3><p>Corporation plans urban makeover.</p></li>
+            <li><h3><a href="https://indianopinion.org/karnataka-orders-blacklisting-of-lt-over-jal-jeevan-mission-delays/" target="_blank" rel="noopener">L&amp;T faces Karnataka blacklist</a><a class="dn" href="https://indianopinion.org/karnataka-orders-blacklisting-of-lt-over-jal-jeevan-mission-delays/" target="_blank" rel="noopener">DN</a></h3><p>Over Jal Jeevan project delays.</p></li>
+            <li><h3><a href="https://indianopinion.org/yogi-invites-cnh-to-make-bulldozers-in-up-calls-it-state-brand/" target="_blank" rel="noopener">Yogi invites CNH to make bulldozers</a><a class="dn" href="https://indianopinion.org/yogi-invites-cnh-to-make-bulldozers-in-up-calls-it-state-brand/" target="_blank" rel="noopener">DN</a></h3><p>Calls the bulldozer a UP brand.</p></li>
+          </ul>
+        </section>
+        <section>
+          <div class="sec">Money</div>
+          <ul>
+            <li><h3><a href="https://www.businesstoday.in/latest/economy/story/rbi-may-struggle-to-meet-4-inflation-target-economist-flags-fastest-money-credit-growth-since-2012-13-566941-2026-11-11" target="_blank" rel="noopener">RBI may miss 4% target</a><a class="dn" href="https://www.businesstoday.in/latest/economy/story/rbi-may-struggle-to-meet-4-inflation-target-economist-flags-fastest-money-credit-growth-since-2012-13-566941-2026-11-11" target="_blank" rel="noopener">DN</a></h3><p>Fastest credit growth since 2012-13.</p></li>
+            <li><h3><a href="https://www.businesstoday.in/bt-tv/whats-hot/video/budget-2027-industry-seeks-ltcg-tax-abolition-stcg-cut-to-10-lower-stt-rates-566871-2026-11-11" target="_blank" rel="noopener">Industry’s Budget 2027 wish</a><a class="dn" href="https://www.businesstoday.in/bt-tv/whats-hot/video/budget-2027-industry-seeks-ltcg-tax-abolition-stcg-cut-to-10-lower-stt-rates-566871-2026-11-11" target="_blank" rel="noopener">DN</a></h3><p>End LTCG tax, cut STCG to 10%.</p></li>
+            <li><h3><a href="https://indianopinion.org/exim-bank-opens-120-management-trainee-and-manager-posts/" target="_blank" rel="noopener">Exim Bank: 120 posts</a><a class="dn" href="https://indianopinion.org/exim-bank-opens-120-management-trainee-and-manager-posts/" target="_blank" rel="noopener">DN</a></h3><p>Apply by 11 December.</p></li>
+            <li><h3><a href="https://thehill.com/policy/technology/6212083-nvidia-hired-former-us-attorney/" target="_blank" rel="noopener">Nvidia board hires investigator</a><a class="dn" href="https://thehill.com/policy/technology/6212083-nvidia-hired-former-us-attorney/" target="_blank" rel="noopener">DN</a></h3><p>Ex-US attorney to probe CEO links.</p></li>
+            <li><h3><a href="https://indianopinion.org/lutnick-stalls-trumps-nvidia-chip-crackdown-again-report/" target="_blank" rel="noopener">US chip curb stalled again</a><a class="dn" href="https://indianopinion.org/lutnick-stalls-trumps-nvidia-chip-crackdown-again-report/" target="_blank" rel="noopener">DN</a></h3><p>Third delay this year: Axios.</p></li>
+            <li><h3><a href="https://www.reuters.com/world/pla-linked-chinese-university-bought-nvidia-h200-chips-despite-us-blacklist-2026-11-11/" target="_blank" rel="noopener">Blacklisted varsity got Nvidia chips</a><a class="dn" href="https://www.reuters.com/world/pla-linked-chinese-university-bought-nvidia-h200-chips-despite-us-blacklist-2026-11-11/" target="_blank" rel="noopener">DN</a></h3><p>PLA-linked buyer used a third party.</p></li>
+          </ul>
+        </section>
+        <section>
+          <div class="sec">Sports</div>
+          <ul>
+            <li><h3><a href="https://indianopinion.org/shreyas-iyer-to-lead-india-in-fourth-odi-against-new-zealand-on-friday/" target="_blank" rel="noopener">Iyer to lead India in 4th ODI</a><a class="dn" href="https://indianopinion.org/shreyas-iyer-to-lead-india-in-fourth-odi-against-new-zealand-on-friday/" target="_blank" rel="noopener">DN</a></h3><p>Gill rested; India lead NZ 2-0, Friday at Mount Maunganui.</p></li>
+            <li><h3><a href="https://www.cricketwinner.com/cricket-news/india-beat-afghanistan-u19-asia-cup-2026-semifinal-final-vs-pakistan/" target="_blank" rel="noopener">India U19 beat Afghanistan, enter final</a><a class="dn" href="https://www.cricketwinner.com/cricket-news/india-beat-afghanistan-u19-asia-cup-2026-semifinal-final-vs-pakistan/" target="_blank" rel="noopener">DN</a></h3><p>Won by 8 wickets; Pakistan in final on 14 Nov.</p></li>
+            <li><h3><a href="https://indianopinion.org/pt-usha-seeks-pm-modi-meeting-after-ioa-election-loss/" target="_blank" rel="noopener">PT Usha seeks PM meeting</a><a class="dn" href="https://indianopinion.org/pt-usha-seeks-pm-modi-meeting-after-ioa-election-loss/" target="_blank" rel="noopener">DN</a></h3><p>Lost IOA athletes’ seat by three votes.</p></li>
+            <li><h3><a href="https://indianopinion.org/abhinav-bindra-urges-transparency-in-ioa-som-election-rules/" target="_blank" rel="noopener">Bindra wants clear IOA rules</a><a class="dn" href="https://indianopinion.org/abhinav-bindra-urges-transparency-in-ioa-som-election-rules/" target="_blank" rel="noopener">DN</a></h3><p>Seeks transparency in athlete polls.</p></li>
+            <li><h3><a href="https://indianopinion.org/tamil-nadu-teen-archer-sangamithra-wins-gold-at-junior-nationals/" target="_blank" rel="noopener">TN archer Sangamithra wins gold</a><a class="dn" href="https://indianopinion.org/tamil-nadu-teen-archer-sangamithra-wins-gold-at-junior-nationals/" target="_blank" rel="noopener">DN</a></h3><p>At the junior national championship.</p></li>
+            <li><h3><a href="https://indianopinion.org/harbhajan-singh-meets-uttarakhand-cm-dhami-discusses-sports-push/" target="_blank" rel="noopener">Harbhajan meets CM Dhami</a><a class="dn" href="https://indianopinion.org/harbhajan-singh-meets-uttarakhand-cm-dhami-discusses-sports-push/" target="_blank" rel="noopener">DN</a></h3><p>Talks on sports push in Uttarakhand.</p></li>
+          </ul>
+        </section>
+        <section>
+          <div class="sec">South Screen</div>
+          <ul>
+            <li><h3><a href="https://indianopinion.org/mani-ratnams-inji-vellam-to-release-on-january-29-2027/" target="_blank" rel="noopener">Inji Vellam on 29 Jan</a><a class="dn" href="https://indianopinion.org/mani-ratnams-inji-vellam-to-release-on-january-29-2027/" target="_blank" rel="noopener">DN</a></h3><p>Mani Ratnam; music by AR Rahman.</p></li>
+            <li><h3><a href="https://indianopinion.org/sharwanands-bhogi-postponed-due-to-unforeseen-delays-say-makers/" target="_blank" rel="noopener">Bhogi postponed</a><a class="dn" href="https://indianopinion.org/sharwanands-bhogi-postponed-due-to-unforeseen-delays-say-makers/" target="_blank" rel="noopener">DN</a></h3><p>Was due today; no new date.</p></li>
+            <li><h3><a href="https://indianopinion.org/itllu-arjuna-paid-premieres-confirmed-for-november-12/" target="_blank" rel="noopener">Itllu Arjuna premieres</a><a class="dn" href="https://indianopinion.org/itllu-arjuna-paid-premieres-confirmed-for-november-12/" target="_blank" rel="noopener">DN</a></h3><p>Wide release on Friday.</p></li>
+            <li><h3><a href="https://indianopinion.org/divya-bharathi-breaks-down-at-g-o-a-t-pre-release-event/" target="_blank" rel="noopener">Divya Bharathi in tears</a><a class="dn" href="https://indianopinion.org/divya-bharathi-breaks-down-at-g-o-a-t-pre-release-event/" target="_blank" rel="noopener">DN</a></h3><p>At G.O.A.T pre-release event.</p></li>
+            <li><h3><a href="https://indianopinion.org/kashmir-got-talent-finale-in-kupwara-draws-stars-and-3000-attendees/" target="_blank" rel="noopener">Kashmir Got Talent finale</a><a class="dn" href="https://indianopinion.org/kashmir-got-talent-finale-in-kupwara-draws-stars-and-3000-attendees/" target="_blank" rel="noopener">DN</a></h3><p>3,000 attend in Kupwara.</p></li>
+            <li><h3><a href="https://indianopinion.org/idupu-kayitham-teaser-out-priyadarshi-naga-durga-film-hits-screens-december-11/" target="_blank" rel="noopener">Idupu Kayitham teaser out</a><a class="dn" href="https://indianopinion.org/idupu-kayitham-teaser-out-priyadarshi-naga-durga-film-hits-screens-december-11/" target="_blank" rel="noopener">DN</a></h3><p>Telugu film opens 11 December.</p></li>
+          </ul>
+        </section>
+      </div>
+      <div class="duo">
+          <article><h3><a href="https://apnews.com/article/cop31-turkey-climate-change-fossil-fuels-solar-485bafe52db2c4ab240b9017dcaf8259" target="_blank" rel="noopener">Five nations pledge to double rooftop solar homes by 2030</a><a class="dn" href="https://apnews.com/article/cop31-turkey-climate-change-fossil-fuels-solar-485bafe52db2c4ab240b9017dcaf8259" target="_blank" rel="noopener">DN</a></h3><p>Australia, Bangladesh, Kenya, Nigeria and Vanuatu endorsed a declaration at COP31 in Turkey to double the number of homes with rooftop solar by 2030. UN chief António Guterres warned the slow response has put the world on a path to destruction.</p></article>
+          <article><h3><a href="https://www.politico.eu/article/nato-shrink-forces-missions-abroad-focus-fight-russia/" target="_blank" rel="noopener">NATO weighs biggest planning shake-up in two decades</a><a class="dn" href="https://www.politico.eu/article/nato-shrink-forces-missions-abroad-focus-fight-russia/" target="_blank" rel="noopener">DN</a></h3><p>Allies are weighing their biggest change in military planning in at least two decades, putting a possible fight with Russia ahead of sending troops on distant missions. Drones from Ukrainian strikes strayed into Baltic airspace this week.</p></article>
+          <article><h3><a href="https://apnews.com/article/israel-election-netanyahu-eisenkot-knesset-68e96ea53ad8614f1e2aa6a546c64ad9" target="_blank" rel="noopener">Eisenkot vows to undo Netanyahu policies as Knesset sworn in</a><a class="dn" href="https://apnews.com/article/israel-election-netanyahu-eisenkot-knesset-68e96ea53ad8614f1e2aa6a546c64ad9" target="_blank" rel="noopener">DN</a></h3><p>Gadi Eisenkot’s Yashar party pledged to reverse many of Prime Minister Benjamin Netanyahu’s policies as the new Knesset was sworn in. It is not yet clear whether Eisenkot can put together a coalition to govern.</p></article>
+          <article><h3><a href="https://apnews.com/article/greta-thunberg-cop31-climate-change-f6845d33be04d42d2cbdb4d5d013ebe7" target="_blank" rel="noopener">Greta Thunberg calls COP31 hypocritical</a><a class="dn" href="https://apnews.com/article/greta-thunberg-cop31-climate-change-f6845d33be04d42d2cbdb4d5d013ebe7" target="_blank" rel="noopener">DN</a></h3><p>The climate activist condemned the summit in Turkey as hypocritical, citing the influence of lobbyists. Brazil plans to launch its road map for moving away from fossil fuels at the same meeting.</p></article>
+          <article class="wide"><h3><a href="https://indianopinion.org/iaf-opens-afcat-1-2027-applications-for-284-officer-vacancies/" target="_blank" rel="noopener">IAF opens AFCAT 1/2027 for 284 officer posts</a><a class="dn" href="https://indianopinion.org/iaf-opens-afcat-1-2027-applications-for-284-officer-vacancies/" target="_blank" rel="noopener">DN</a></h3><p><span class="dl">NEW DELHI:</span> The Indian Air Force has opened online applications for AFCAT 1/2027 to fill 284 Group ‘A’ officer posts in the Flying Branch and Ground Duty (Technical and Non-Technical). Registration began at 11 am on Thursday and closes at 11:30 pm on 11 December on afcat.edcil.co.in. The online exam is on 31 January 2027, followed by the Air Force Selection Board tests and a medical check. Age limits are counted as on 1 January 2028, when the courses begin, with entry through Permanent or Short Service Commission.</p></article>
+      </div>
+    </section>
+
+    <!-- RIGHT: WORLD + BOLLYWOOD -->
+    <aside class="side r">
+      <div class="boxhead">WORLD</div>
+      <ul>
+        <li><span class="k">Gulf</span><a href="https://indianopinion.org/three-malayali-family-members-killed-in-fujairah-road-accident/" target="_blank" rel="noopener">3 of Kerala family killed in Fujairah crash</a><a class="dn" href="https://indianopinion.org/three-malayali-family-members-killed-in-fujairah-road-accident/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Haiti</span><a href="https://www.axios.com/2026/11/10/el-salvador-state-department-haiti-gangs" target="_blank" rel="noopener">El Salvador rebukes US envoy over Haiti</a><a class="dn" href="https://www.axios.com/2026/11/10/el-salvador-state-department-haiti-gangs" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Ukraine</span><a href="https://apnews.com/article/russia-ukraine-war-talks-kushner-witkoff-7c8d1024302e0c6ad8be064eec852a64" target="_blank" rel="noopener">Big POW swap agreed at Abu Dhabi talks</a><a class="dn" href="https://apnews.com/article/russia-ukraine-war-talks-kushner-witkoff-7c8d1024302e0c6ad8be064eec852a64" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Iran</span><a href="https://www.nytimes.com/2026/11/10/us/politics/rubio-iran-war.html" target="_blank" rel="noopener">Rubio: pressure may avert Iran combat</a><a class="dn" href="https://www.nytimes.com/2026/11/10/us/politics/rubio-iran-war.html" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Iran</span><a href="https://www.reuters.com/world/middle-east/iran-will-not-allow-enriched-nuclear-material-leave-country-security-chief-says-2026-11-11/" target="_blank" rel="noopener">No enriched uranium will leave: Tehran</a><a class="dn" href="https://www.reuters.com/world/middle-east/iran-will-not-allow-enriched-nuclear-material-leave-country-security-chief-says-2026-11-11/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">US</span><a href="https://www.nytimes.com/2026/11/10/us/politics/bessent-moved-base-iran-threats.html" target="_blank" rel="noopener">Bessent moved to base over threats</a><a class="dn" href="https://www.nytimes.com/2026/11/10/us/politics/bessent-moved-base-iran-threats.html" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Baltics</span><a href="https://www.reuters.com/world/latvia-lithuania-warn-threat-airspace-near-belarus-2026-11-10/" target="_blank" rel="noopener">Stray drones enter Baltic airspace</a><a class="dn" href="https://www.reuters.com/world/latvia-lithuania-warn-threat-airspace-near-belarus-2026-11-10/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">COP31</span><a href="https://www.reuters.com/sustainability/cop/world-leaders-address-cop31-turkey-pushes-new-climate-deal-2026-11-11/" target="_blank" rel="noopener">Guterres warns of path to destruction</a><a class="dn" href="https://www.reuters.com/sustainability/cop/world-leaders-address-cop31-turkey-pushes-new-climate-deal-2026-11-11/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Italy</span><a href="https://www.reuters.com/world/least-300-italian-schools-evacuated-after-email-bomb-alerts-2026-11-11/" target="_blank" rel="noopener">300 schools evacuated in bomb hoax</a><a class="dn" href="https://www.reuters.com/world/least-300-italian-schools-evacuated-after-email-bomb-alerts-2026-11-11/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">UK</span><a href="https://www.washingtonpost.com/world/2026/11/10/us-army-officer-arrested-uk-suspicion-trying-steal-secrets-russia/" target="_blank" rel="noopener">US soldier held in UK on spy suspicion</a><a class="dn" href="https://www.washingtonpost.com/world/2026/11/10/us-army-officer-arrested-uk-suspicion-trying-steal-secrets-russia/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">France</span><a href="https://www.reuters.com/legal/litigation/frances-president-wife-file-new-lawsuit-against-us-podcaster-owens-2026-11-10/" target="_blank" rel="noopener">Macrons sue Candace Owens again</a><a class="dn" href="https://www.reuters.com/legal/litigation/frances-president-wife-file-new-lawsuit-against-us-podcaster-owens-2026-11-10/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Iran</span><a href="https://www.reuters.com/world/americas/iran-designates-argentinas-navy-air-force-terrorist-organizations-2026-11-11/" target="_blank" rel="noopener">Iran brands Argentine forces ‘terrorist’</a><a class="dn" href="https://www.reuters.com/world/americas/iran-designates-argentinas-navy-air-force-terrorist-organizations-2026-11-11/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Russia</span><a href="https://www.reuters.com/world/russia-arrests-two-suspected-polish-spies-kaliningrad-interfax-reports-2026-11-11/" target="_blank" rel="noopener">Two held as Polish spies in Kaliningrad</a><a class="dn" href="https://www.reuters.com/world/russia-arrests-two-suspected-polish-spies-kaliningrad-interfax-reports-2026-11-11/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Gaza</span><a href="https://www.reuters.com/world/middle-east/israeli-fire-kills-father-son-gaza-medics-say-2026-11-10/" target="_blank" rel="noopener">Father, son among 7 killed in Gaza</a><a class="dn" href="https://www.reuters.com/world/middle-east/israeli-fire-kills-father-son-gaza-medics-say-2026-11-10/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Caribbean</span><a href="https://apnews.com/article/trinidad-gay-sex-privy-council-ruling-4ad477cea8ca4dd7455373e572a4e392" target="_blank" rel="noopener">Trinidad’s colonial-era gay sex ban struck down</a><a class="dn" href="https://apnews.com/article/trinidad-gay-sex-privy-council-ruling-4ad477cea8ca4dd7455373e572a4e392" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">US</span><a href="https://www.bbc.co.uk/news/articles/c3rryrryk59zo" target="_blank" rel="noopener">US charges three Iran-backed plotters</a><a class="dn" href="https://www.bbc.co.uk/news/articles/c3rryrryk59zo" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Cyber</span><a href="https://www.reuters.com/legal/government/kazakhstan-linked-hackers-used-ai-steal-tajik-government-documents-researchers-2026-11-11/" target="_blank" rel="noopener">Hackers used AI to steal Tajik files</a><a class="dn" href="https://www.reuters.com/legal/government/kazakhstan-linked-hackers-used-ai-steal-tajik-government-documents-researchers-2026-11-11/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">UK</span><a href="https://www.newsbytesapp.com/news/entertainment/david-walliams-allegations-comedian-lucy-beaumont-fears-industry-backlash/story" target="_blank" rel="noopener">Comedian fears backlash over Walliams row</a><a class="dn" href="https://www.newsbytesapp.com/news/entertainment/david-walliams-allegations-comedian-lucy-beaumont-fears-industry-backlash/story" target="_blank" rel="noopener">DN</a></li>
+      </ul>
+      <div class="boxhead sub">BOLLYWOOD</div>
+      <ul>
+        <li><span class="k">Box office</span><a href="https://indianopinion.org/ramayana-part-1-nears-rs-1000-crore-worldwide-in-seven-days/" target="_blank" rel="noopener">Ramayana India net crosses ₹523 cr on Day 8</a><a class="dn" href="https://indianopinion.org/ramayana-part-1-nears-rs-1000-crore-worldwide-in-seven-days/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">SRK</span><a href="https://indianopinion.org/shah-rukh-khan-says-mannat-was-once-beyond-his-means-recalls-buying-first-home-with-gauri/" target="_blank" rel="noopener">Mannat was once beyond my means: SRK</a><a class="dn" href="https://indianopinion.org/shah-rukh-khan-says-mannat-was-once-beyond-his-means-recalls-buying-first-home-with-gauri/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Notice</span><a href="https://indianopinion.org/kareena-kapoor-gets-legal-notice-over-quran-inscribed-heirloom-pendant/" target="_blank" rel="noopener">Kareena gets legal notice over pendant</a><a class="dn" href="https://indianopinion.org/kareena-kapoor-gets-legal-notice-over-quran-inscribed-heirloom-pendant/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Wedding</span><a href="https://www.filmibeat.com/bollywood/news/2026/entertainment-live-news-updates-anirudh-kavya-maran-wedding-first-pics-kareena-kapoor-legal-notice-537739.html" target="_blank" rel="noopener">Anirudh, Kavya Maran marry in Greece</a><a class="dn" href="https://www.filmibeat.com/bollywood/news/2026/entertainment-live-news-updates-anirudh-kavya-maran-wedding-first-pics-kareena-kapoor-legal-notice-537739.html" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Koffee</span><a href="https://www.bollywoodhungama.com/news/features/koffee-with-karan-9-kiara-advani-reveals-she-checks-sidharth-malhotra-phone-actor-complains-about-kiaras-photography-skills/" target="_blank" rel="noopener">Kiara admits she checks Sid’s phone</a><a class="dn" href="https://www.bollywoodhungama.com/news/features/koffee-with-karan-9-kiara-advani-reveals-she-checks-sidharth-malhotra-phone-actor-complains-about-kiaras-photography-skills/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Loss</span><a href="https://www.bollywoodhungama.com/news/bollywood/ranveer-singhs-grandfather-dr-ram-hingorani-passes-away-at-96-cousin-saumya-shares-emotional-tribute/" target="_blank" rel="noopener">Ranveer’s grandfather dies at 96</a><a class="dn" href="https://www.bollywoodhungama.com/news/bollywood/ranveer-singhs-grandfather-dr-ram-hingorani-passes-away-at-96-cousin-saumya-shares-emotional-tribute/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Audio</span><a href="https://indianopinion.org/spotify-launches-audiobooks-in-india-with-over-3-5-lakh-titles/" target="_blank" rel="noopener">Spotify brings 3.5 lakh audiobooks to India</a><a class="dn" href="https://indianopinion.org/spotify-launches-audiobooks-in-india-with-over-3-5-lakh-titles/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Court</span><a href="https://www.bollywoodhungama.com/news/bollywood/nora-fatehis-appearance-in-sukesh-chandrashekhar-case-comes-under-scrutiny-as-defence-prepares-for-cross-examination/" target="_blank" rel="noopener">Nora Fatehi role in Sukesh case probed</a><a class="dn" href="https://www.bollywoodhungama.com/news/bollywood/nora-fatehis-appearance-in-sukesh-chandrashekhar-case-comes-under-scrutiny-as-defence-prepares-for-cross-examination/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Festive</span><a href="https://www.bollywoodhungama.com/news/features/kartik-aaryan-celebrates-bhai-dooj-on-film-set-as-sister-kritika-tiwari-arrives-to-collect-her-gift-shoot-pe-bhi-gift-lene-aa-gayi/" target="_blank" rel="noopener">Kartik marks Bhai Dooj on film set</a><a class="dn" href="https://www.bollywoodhungama.com/news/features/kartik-aaryan-celebrates-bhai-dooj-on-film-set-as-sister-kritika-tiwari-arrives-to-collect-her-gift-shoot-pe-bhi-gift-lene-aa-gayi/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Social</span><a href="https://www.bollywoodhungama.com/news/bollywood/rohit-shetty-clarifies-his-social-media-presence-after-fake-post-about-gaurav-guptas-bigg-boss-20-roast-goes-viral-my-only-official-social-media-presence-is-on-instagram/" target="_blank" rel="noopener">Rohit Shetty flags fake post</a><a class="dn" href="https://www.bollywoodhungama.com/news/bollywood/rohit-shetty-clarifies-his-social-media-presence-after-fake-post-about-gaurav-guptas-bigg-boss-20-roast-goes-viral-my-only-official-social-media-presence-is-on-instagram/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">SRK</span><a href="https://www.filmibeat.com/bollywood/news/2026/entertainment-live-news-updates-anirudh-kavya-maran-wedding-first-pics-kareena-kapoor-legal-notice-537739.html" target="_blank" rel="noopener">SRK dances to King song in Dubai</a><a class="dn" href="https://www.filmibeat.com/bollywood/news/2026/entertainment-live-news-updates-anirudh-kavya-maran-wedding-first-pics-kareena-kapoor-legal-notice-537739.html" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">OTT</span><a href="https://www.bollywoodhungama.com/news/bollywood/campus-diaries-season-2-teaser-out-harsh-beniwal-and-ritvik-sahore-return-with-more-college-drama/" target="_blank" rel="noopener">Campus Diaries 2 teaser out</a><a class="dn" href="https://www.bollywoodhungama.com/news/bollywood/campus-diaries-season-2-teaser-out-harsh-beniwal-and-ritvik-sahore-return-with-more-college-drama/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Koffee</span><a href="https://www.bollywoodhungama.com/news/features/koffee-with-karan-9-sidharth-malhotra-takes-a-dig-at-kartik-aaryans-great-pr-budget-during-rapid-fire-round/" target="_blank" rel="noopener">Sidharth takes dig at Kartik’s PR budget</a><a class="dn" href="https://www.bollywoodhungama.com/news/features/koffee-with-karan-9-sidharth-malhotra-takes-a-dig-at-kartik-aaryans-great-pr-budget-during-rapid-fire-round/" target="_blank" rel="noopener">DN</a></li>
+        <li><span class="k">Record</span><a href="https://www.newsbytesapp.com/news/entertainment/ramayana-poised-to-surpass-animal-globally/story" target="_blank" rel="noopener">Ramayana set to beat Animal for Ranbir</a><a class="dn" href="https://www.newsbytesapp.com/news/entertainment/ramayana-poised-to-surpass-animal-globally/story" target="_blank" rel="noopener">DN</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <section class="ent">
+    <div class="enthead">ENTERTAINMENT</div>
+    <div class="entgrid">
+      <div class="entcol">
+        <div class="sec">Bollywood</div>
+          <article><h3><a href="https://www.newsbytesapp.com/news/entertainment/emraan-hashmi-s-new-role-in-gunmaaster-g9/story" target="_blank" rel="noopener">Gunmaaster G9 trailer out</a><a class="dn" href="https://www.newsbytesapp.com/news/entertainment/emraan-hashmi-s-new-role-in-gunmaaster-g9/story" target="_blank" rel="noopener">DN</a></h3><p>Emraan Hashmi plays Eshwar, a man on a rampage, in the action film’s trailer released on Wednesday.</p></article>
+          <article><h3><a href="https://www.newsbytesapp.com/news/entertainment/ram-gopal-varma-praises-ramayana-part-1/story" target="_blank" rel="noopener">RGV hails Ramayana</a><a class="dn" href="https://www.newsbytesapp.com/news/entertainment/ram-gopal-varma-praises-ramayana-part-1/story" target="_blank" rel="noopener">DN</a></h3><p>Ram Gopal Varma praised Ramayana: Part 1 with a blunt jibe at the Hindi film industry.</p></article>
+      </div>
+      <div class="entcol">
+        <div class="sec">South</div>
+          <article><h3><a href="https://www.newsbytesapp.com/news/entertainment/haasans-sandiyar-title-challenged-in-chennai-petition-by-k-krishnasamy/tldr" target="_blank" rel="noopener">Row over Kamal’s Sandiyar</a><a class="dn" href="https://www.newsbytesapp.com/news/entertainment/haasans-sandiyar-title-challenged-in-chennai-petition-by-k-krishnasamy/tldr" target="_blank" rel="noopener">DN</a></h3><p>K. Krishnasamy has filed a petition in Chennai against the title of Kamal Haasan’s next film.</p></article>
+          <article><h3><a href="https://www.newsbytesapp.com/news/entertainment/jonnalagaddas-romantic-film-launches-as-mohan-b-makes-directorial-debut/tldr" target="_blank" rel="noopener">Siddhu’s new romance rolls</a><a class="dn" href="https://www.newsbytesapp.com/news/entertainment/jonnalagaddas-romantic-film-launches-as-mohan-b-makes-directorial-debut/tldr" target="_blank" rel="noopener">DN</a></h3><p>Mohan B makes his directing debut; Sukumar gave the first clap at the launch puja.</p></article>
+      </div>
+      <div class="entcol">
+        <div class="sec">OTT</div>
+          <article><h3><a href="https://www.theweek.in/news/entertainment/2026/11/11/jailer-2-box-office-collection-ott-release-date.html" target="_blank" rel="noopener">Jailer 2 streams from today</a><a class="dn" href="https://www.theweek.in/news/entertainment/2026/11/11/jailer-2-box-office-collection-ott-release-date.html" target="_blank" rel="noopener">DN</a></h3><p>After about ₹830 crore worldwide, Rajinikanth’s film is on Prime Video in its theatrical cut.</p></article>
+          <article><h3><a href="https://www.newsbytesapp.com/news/entertainment/baththa-becomes-netflix-6th-most-watched-south-indian-film/tldr" target="_blank" rel="noopener">Baththa a Netflix hit</a><a class="dn" href="https://www.newsbytesapp.com/news/entertainment/baththa-becomes-netflix-6th-most-watched-south-indian-film/tldr" target="_blank" rel="noopener">DN</a></h3><p>Vijay Sethupathi’s film drew 4.8 million views in two weeks.</p></article>
+      </div>
+      <div class="entcol">
+        <div class="sec">Hollywood</div>
+          <article><h3><a href="https://www.newsbytesapp.com/news/entertainment/florence-pugh-s-stand-against-set-misconduct/story" target="_blank" rel="noopener">Florence Pugh on set conduct</a><a class="dn" href="https://www.newsbytesapp.com/news/entertainment/florence-pugh-s-stand-against-set-misconduct/story" target="_blank" rel="noopener">DN</a></h3><p>The actor speaks about taking a lead in setting boundaries on film sets.</p></article>
+          <article><h3><a href="https://www.newsbytesapp.com/news/entertainment/reynolds-reveals-parkinsons-as-days-of-our-lives-incorporates-diagnosis/tldr" target="_blank" rel="noopener">James Reynolds has Parkinson’s</a><a class="dn" href="https://www.newsbytesapp.com/news/entertainment/reynolds-reveals-parkinsons-as-days-of-our-lives-incorporates-diagnosis/tldr" target="_blank" rel="noopener">DN</a></h3><p>The 80-year-old’s diagnosis will be written into Days of Our Lives.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM: SQUARE AD + HOUSE STORY -->
+  <section class="bottom">
+    <aside class="ad" aria-label="Advertisement">
+      <span class="advt">ADVT</span>
+      <div class="adlogo">
+        <svg viewBox="0 0 64 64" width="34" height="34" aria-hidden="true">
+          <rect x="6" y="6" width="40" height="52" fill="#ffffff"/>
+          <path d="M34 6 V18 H46" fill="none" stroke="#0b3d91" stroke-width="3"/>
+          <rect x="12" y="24" width="26" height="4" fill="#0b3d91"/>
+          <rect x="12" y="32" width="26" height="3" fill="#141414"/><rect x="12" y="39" width="20" height="3" fill="#141414"/><rect x="12" y="46" width="23" height="3" fill="#141414"/>
+          <path d="M48 30 a10 10 0 0 1 0 14" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+          <path d="M53 25 a17 17 0 0 1 0 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <span>PRINGITAL<br>NEWS</span>
+      </div>
+      <div class="tag">First Ever AI-Created Alternate Creative Innovative Media</div>
+    </aside>
+    <article class="house">
+      <span class="kick">From the Editor</span>
+      <h2><span class="b">Credible Like Print.</span> <span class="rd">Fast Like Digital.</span></h2>
+      <div class="cols">
+        <p>In today’s fast-paced world, readers generally spend just about four minutes catching up with the news. We have designed this news pack precisely for those four minutes: a crisp, fact-rich daily read that brings the credibility, authenticity and editorial discipline of print journalism with the speed and convenience of digital.</p>
+        <p>It offers the familiar feel and organised reading experience of a newspaper without the need to print one, helping save paper and trees. Easily accessible, even through WhatsApp, it puts the day’s important news at your fingertips.</p>
+        <p>Read it in four minutes, explore further through links whenever you wish, and satisfy your daily thirst for news.</p>
+        <p>This alternate will save the bulk of trees cut for newsprint, and you can listen to the important news in just four minutes <mark class="dnhl"><a href="/bulletin/"><span class="dn">DN</span>here</a></mark>.</p>
+      </div>
+    </article>
+  </section>
+
+  <footer class="imprint">
+    <span class="who">A Journalism Initiative by <span>Sudhanshu Srivastava</span> / 8383823531</span>
+    <span class="m">Pringital News · Page 1 · pringital.com</span>
+  </footer>
+</div>
+</div>
+
+<script>
+(function(){
+  var fit=document.getElementById('fit'), page=document.getElementById('page');
+  function size(){
+    var w=fit.clientWidth||794, s=Math.min(1,w/794);
+    page.style.transform=s<1?'scale('+s+')':'';
+    fit.style.height=(page.offsetHeight*s)+'px';
+  }
+  size(); window.addEventListener('resize',size);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(size);
+})();
+</script>
+
+</body>
+</html>

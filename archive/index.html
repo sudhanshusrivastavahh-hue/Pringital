@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Pringital News · Archive</title>
+<meta name="description" content="Past editions of Pringital News: front pages and four-minute bulletins.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,700&family=Inter:wght@600;800&display=swap">
+<style>
+/* Layout: newspaper "back issues" ledger: masthead, then one row per edition with date block, lead headline and two links. Single newsprint theme, matching the front page. */
+:root{--paper:#ffffff;--desk:#f4f2ed;--ink:#141414;--muted:#55524b;--red:#c4121c;--tint:#fde8e9;--rule:#d6d3cc;--blue:#0b3d91;
+--display:"Playfair Display",Georgia,serif;--body:"Source Serif 4",Georgia,serif;--ui:Inter,"Helvetica Neue",Arial,sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:26px 48px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font:800 11px/1.3 var(--ui);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border-bottom:3px solid var(--ink);padding-bottom:8px}
+.top a{color:var(--red);text-decoration:none}
+h1{margin:0;text-align:center;font:900 clamp(34px,8vw,54px)/1 var(--display);letter-spacing:-.01em}
+h1 span{color:var(--red)}
+.tag{text-align:center;font:italic 700 clamp(16px,3.4vw,20px)/1.2 var(--display);border-top:1px solid var(--ink);border-bottom:3px double var(--ink);padding:6px 0}
+.tag .b{color:var(--blue)} .tag .r{color:var(--red)}
+h2{margin:6px 0 0;font:800 12px/1 var(--ui);letter-spacing:.16em;text-transform:uppercase;background:var(--ink);color:#fff;text-align:center;padding:6px 0}
+ol{list-style:none;margin:0;padding:0}
+li{display:grid;grid-template-columns:86px minmax(0,1fr);gap:16px;padding:16px 0;border-bottom:1px solid var(--rule);align-items:start}
+.date{border:2px solid var(--ink);text-align:center;padding:6px 4px;font-variant-numeric:tabular-nums}
+.date .d{display:block;font:900 32px/1 var(--display)}
+.date .m{display:block;font:800 10px/1.4 var(--ui);letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.date .y{display:block;font:600 10px/1.2 var(--ui);color:var(--muted)}
+.kick{font:800 10px/1 var(--ui);letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.ed h3{margin:4px 0 4px;font:900 22px/1.15 var(--display)}
+.ed h3 a{text-decoration:none}
+.ed h3 a:hover{text-decoration:underline}
+.ed p{margin:0;font-size:15px;line-height:1.5;color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.btn{display:inline-flex;align-items:center;gap:6px;font:800 12px/1 var(--ui);text-decoration:none;padding:8px 12px;border-radius:18px;border:1.5px solid var(--ink)}
+.btn:hover{background:var(--ink);color:#fff}
+.btn.listen{border-color:var(--red);background:var(--tint);color:var(--red)}
+.btn.listen:hover{background:var(--red);color:#fff}
+.latest{font:800 9.5px/1 var(--ui);letter-spacing:.1em;background:var(--red);color:#fff;padding:3px 6px;border-radius:2px;margin-left:6px;vertical-align:2px}
+.foot{border-top:3px double var(--ink);padding-top:10px;font:800 12px/1.5 var(--ui);letter-spacing:.06em;text-transform:uppercase;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.foot span span{color:var(--red)}
+@media (max-width:480px){li{grid-template-columns:64px minmax(0,1fr);gap:12px}.date .d{font-size:26px}.ed h3{font-size:19px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><span>Pringital News · Back Issues</span><a href="/">← Today’s edition</a></div>
+  <h1>PRINGITAL <span>NEWS</span></h1>
+  <div class="tag"><span class="b">Trust Like Print.</span> <span class="r">Speed Like Digital.</span></div>
+  <h2>Archive · Previous Editions</h2>
+  <ol>
+    <li>
+      <div class="date"><span class="d">12</span><span class="m">Nov</span><span class="y">2026 · Thu</span></div>
+      <div class="ed">
+        <span class="kick">New Delhi Edition</span><span class="latest">LATEST</span>
+        <h3><a href="/archive/2026-11-12/">Inflation Hits 2-Year High of 6.09%, Breaks RBI Limit</a></h3>
+        <p>Also: Delhi’s air heads for ‘severe’; ₹62,370 crore fertiliser subsidy for Rabi; India U19 reach Asia Cup final.</p>
+        <div class="links"><a class="btn" href="/archive/2026-11-12/">Read front page</a><a class="btn listen" href="/archive/2026-11-12/bulletin/">▶ Listen · 4 min</a></div>
+      </div>
+    </li>
+    <li>
+      <div class="date"><span class="d">11</span><span class="m">Nov</span><span class="y">2026 · Wed</span></div>
+      <div class="ed">
+        <span class="kick">New Delhi Edition</span>
+        <h3><a href="/archive/2026-11-11/">Modi, Zelensky Talk Peace Ahead of Abu Dhabi Round</a></h3>
+        <p>Also: cancer drugs get cheaper, with savings above ₹3,500 crore a year; Delhi’s air stays ‘very poor’.</p>
+        <div class="links"><a class="btn" href="/archive/2026-11-11/">Read front page</a><a class="btn listen" href="/archive/2026-11-11/bulletin/">▶ Listen · 4 min</a></div>
+      </div>
+    </li>
+  </ol>
+  <div class="foot"><span>A Journalism Initiative by <span>Sudhanshu Srivastava</span> / 8383823531</span><span>pringital.com</span></div>
+</div>
+</body>
+</html>
