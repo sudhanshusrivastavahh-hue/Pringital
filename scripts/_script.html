@@ -1,0 +1,24 @@
+<script>
+(function(){
+  var root=document.documentElement, fit=document.getElementById('fit'), page=document.getElementById('page');
+  function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
+  function set(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+  function fitPaper(){
+    if(root.getAttribute('data-mode')!=='paper'){page.style.transform='';fit.style.height='';return}
+    var PW=page.offsetWidth||980;var s=Math.min(1,(fit.clientWidth||PW)/PW);
+    page.style.transform=s<1?'scale('+s+')':'';
+    fit.style.height=(page.offsetHeight*s)+'px';
+  }
+  function setMode(m){root.setAttribute('data-mode',m);document.getElementById('m-paper').setAttribute('aria-pressed',m==='paper');document.getElementById('m-web').setAttribute('aria-pressed',m==='web');set('pn-mode',m);fitPaper();}
+  function isDark(){return root.getAttribute('data-theme')==='dark'}
+  var MOON='M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z', SUN='M12 4V2M12 22v-2M4 12H2M22 12h-2M5.6 5.6 4.2 4.2M19.8 19.8l-1.4-1.4M5.6 18.4l-1.4 1.4M19.8 4.2l-1.4 1.4M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z';
+  function paintIcon(){var d=isDark();document.getElementById('ticon').setAttribute('d',d?SUN:MOON);document.getElementById('themebtn').setAttribute('aria-label',d?'Switch to light theme':'Switch to dark theme')}
+  document.getElementById('m-paper').onclick=function(){setMode('paper')};
+  document.getElementById('m-web').onclick=function(){setMode('web')};
+  document.getElementById('themebtn').onclick=function(){var t=isDark()?'light':'dark';root.setAttribute('data-theme',t);set('pn-theme',t);paintIcon()};
+  var t=get('pn-theme'); if(t==='dark'||t==='light') root.setAttribute('data-theme',t);
+  var m=get('pn-mode'); if(m!=='web'&&m!=='paper') m=(window.innerWidth<700?'web':'paper');
+  setMode(m); paintIcon();
+  addEventListener('resize',fitPaper); if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fitPaper);
+})();
+</script>

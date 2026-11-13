@@ -1,0 +1,450 @@
+{
+ "date": "2026-11-13",
+ "dateline": "Friday, 13 November 2026",
+ "edition": "New Delhi Edition",
+ "left": {
+  "top": {
+   "cat": "NATION",
+   "k": "Fuel",
+   "h": "Govt absorbed ₹43 of ₹50 diesel hike: PM",
+   "intro": "Prime Minister Narendra Modi told a farmers’ conference that the Centre absorbed ₹43 a litre of a possible ₹50 diesel increase during the West Asia conflict, so pump prices rose only ₹7. Crude jumped from $70 to $122 a barrel, costing ₹14,000 crore a month, he said.",
+   "url": "https://indianopinion.org/govt-absorbed-rs-43-of-rs-50-diesel-hike-pm-says-at-farmers-conference/",
+   "src": "Indian Opinion"
+  },
+  "sections": [
+   {
+    "name": "NATION",
+    "items": [
+     {
+      "k": "Diplomacy",
+      "h": "Modi to attend ASEAN summit; Quad meet likely",
+      "url": "https://theprint.in/diplomacy/modi-to-visit-philippines-next-week-to-attend-asean-india-summit-quad-leaders-meet-also-likely/3097204/",
+      "src": "ThePrint"
+     },
+     {
+      "k": "Manipur",
+      "h": "Woman killed; 48-hour bandh in Kangpokpi",
+      "url": "https://indianopinion.org/manipur-woman-killed-48-hour-bandh-in-kangpokpi-district/",
+      "src": "Indian Opinion"
+     },
+     {
+      "k": "Kolkata",
+      "h": "3 charged over hotel fire that killed 9",
+      "url": "https://indianopinion.org/kolkata-police-charge-three-for-shikha-inn-fire-that-killed-nine/",
+      "src": "Indian Opinion"
+     },
+     {
+      "k": "Judiciary",
+      "h": "Ex-judge CS Karnan, once jailed for contempt, dies at 71",
+      "url": "https://indianopinion.org/former-madras-high-court-judge-cs-karnan-dies-at-71/",
+      "src": "Indian Opinion"
+     },
+     {
+      "k": "Ladakh",
+      "h": "Sonam Wangchuk alleges house arrest in Leh",
+      "url": "https://indianopinion.org/sonam-wangchuk-alleges-house-arrest-writes-to-ladakh-admin/",
+      "src": "Indian Opinion"
+     },
+     {
+      "k": "SCO",
+      "h": "China confirms Delhi civilisational forum; India hopes Pak attends",
+      "url": "https://indianopinion.org/india-hopes-pakistan-will-attend-sco-civilisational-forum-from-nov-20/",
+      "src": "Indian Opinion"
+     },
+     {
+      "k": "Politics",
+      "h": "BJP attacks boost Sonia memoir sales: Rahul",
+      "url": "https://indianopinion.org/rahul-gandhi-says-bjp-criticism-boosts-sonia-memoir/",
+      "src": "Indian Opinion"
+     },
+     {
+      "k": "Education",
+      "h": "IIT Kharagpur first IIT to launch MD courses",
+      "url": "https://theprint.in/india/education/iit-kharagpur-becomes-first-iit-to-offer-medical-postgraduate-courses-launches-six-md-programmes/3097162/",
+      "src": "ThePrint"
+     }
+    ]
+   },
+   {
+    "name": "STATES",
+    "items": [
+     {
+      "k": "Bihar",
+      "h": "Six-lane bridge named Nitish Setu; PM opens it on 21 Nov",
+      "url": "https://indianopinion.org/bihar-names-six-lane-bridge-as-nitish-setu-pm-modi-to-open-it-on-21-november/",
+      "src": "Indian Opinion"
+     },
+     {
+      "k": "UP",
+      "h": "Board exams 2027 to begin on 5 February",
+      "url": "https://indianopinion.org/up-board-exams-2027-start-february-5-syllabus-deadline-set/",
+      "src": "Indian Opinion"
+     },
+     {
+      "k": "Telangana",
+      "h": "Curbs planned on film promotions in colleges",
+      "url": "https://indianopinion.org/telangana-plans-curbs-on-film-promotions-in-colleges/",
+      "src": "Indian Opinion"
+     },
+     {
+      "k": "Kerala",
+      "h": "Ex-minister to face trial in Messi scam",
+      "url": "https://indianopinion.org/kerala-governor-sanctions-prosecution-of-ex-minister-abdurahiman-in-messi-visa-scam/",
+      "src": "Indian Opinion"
+     }
+    ]
+   },
+   {
+    "name": "BUSINESS",
+    "items": [
+     {
+      "k": "Markets",
+      "h": "Sensex snaps 3-day run, ends 319 pts lower; Nifty at 25,144",
+      "url": "https://www.business-standard.com/amp/markets/news/stock-market-live-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-bn-agrochem-share-split-november-13-126111300069_1.html",
+      "src": "Business Standard"
+     },
+     {
+      "k": "Results",
+      "h": "Grasim profit up 187% despite ₹825 cr one-time loss",
+      "url": "https://indianopinion.org/grasim-profit-jumps-187-but-rs825-crore-one-time-loss-hits-margin/",
+      "src": "Indian Opinion"
+     },
+     {
+      "k": "GIFT City",
+      "h": "NSE opens 7 European markets to Indian investors",
+      "url": "https://indianopinion.org/nse-opens-7-european-markets-to-indian-investors-via-gift-city/",
+      "src": "Indian Opinion"
+     },
+     {
+      "k": "EV",
+      "h": "Ola Electric Q2 loss narrows to ₹362 cr; revenue falls 39%",
+      "url": "https://indianopinion.org/ola-electric-q2-net-loss-narrows-to-rs-362-crore-revenue-falls-39-pc/",
+      "src": "Indian Opinion"
+     },
+     {
+      "k": "Energy",
+      "h": "Reliance plans $4.6 bn Andhra project",
+      "url": "https://theprint.in/india/reliance-plans-to-invest-4-6-billion-in-andhra-pradesh-coal-to-gas-project/3097127/",
+      "src": "ThePrint / Reuters"
+     }
+    ]
+   }
+  ],
+  "bottom": {
+   "cat": "SCIENCE",
+   "k": "ISRO",
+   "h": "Modified PSLV third stage clears ground test",
+   "intro": "After two PSLV failures tied to the third stage, ISRO static-tested a reworked stage at Sriharikota with nozzle fixes and extra sealing. No return-to-flight date yet.",
+   "art": "rocket",
+   "url": "https://indianopinion.org/isro-successfully-tests-modified-pslv-third-stage/",
+   "src": "Indian Opinion"
+  }
+ },
+ "right": {
+  "top": {
+   "cat": "WORLD",
+   "k": "Ukraine",
+   "h": "Europe to join next round of Ukraine peace talks",
+   "intro": "Volodymyr Zelensky and US envoy Jared Kushner said European delegates will sit in on the next Russia–Ukraine talks, after US envoys met Vladimir Putin in Moscow and Zelensky in Dublin. The Kremlin has not confirmed Putin agreed.",
+   "url": "https://www.france24.com/en/europe/20261113-live-zelensky-and-kushner-confirm-that-europe-will-join-next-round-of-russia-ukraine-talks",
+   "src": "France 24"
+  },
+  "sections": [
+   {
+    "name": "WORLD",
+    "items": [
+     {
+      "k": "Finland",
+      "h": "Strike on Russian warship detected in Gulf of Finland",
+      "url": "https://www.aljazeera.com/news/2026/11/13/finland-detects-strike-on-russian-warship-as-zelenskyy-meets-us-envoys",
+      "src": "Al Jazeera"
+     },
+     {
+      "k": "US",
+      "h": "Trump mulls force against Cuba",
+      "url": "https://www.aljazeera.com/news/2026/11/13/trump-moots-toppling-cuba-authorities-before-leaving-office",
+      "src": "Al Jazeera"
+     },
+     {
+      "k": "Haiti",
+      "h": "Police retake national stadium from gangs",
+      "url": "https://www.france24.com/en/americas/20261113-haitian-police-retake-national-stadium-from-gangs-after-two-years",
+      "src": "France 24"
+     },
+     {
+      "k": "Peru",
+      "h": "Pope Leo meets abuse victims in Peru",
+      "url": "https://www.france24.com/en/americas/20261113-pope-leo-xiv-meets-abuse-victims-in-peru-says-church-must-make-amends",
+      "src": "France 24"
+     },
+     {
+      "k": "Spain",
+      "h": "Millions march over housing crisis; hundreds held",
+      "url": "https://theprint.in/world/millions-take-to-the-streets-over-housing-crisis-in-spain-hundreds-arrested/3096995/",
+      "src": "ThePrint / Reuters"
+     },
+     {
+      "k": "Germany",
+      "h": "Over 60% of women soldiers report harassment",
+      "url": "https://www.theguardian.com/world/2026/nov/13/more-than-60-of-germanys-female-soldiers-report-harassment-or-abuse",
+      "src": "The Guardian"
+     },
+     {
+      "k": "NATO",
+      "h": "2027 summit will not be in Tirana: Albania PM",
+      "url": "https://www.aljazeera.com/news/2026/11/13/albanias-pm-says-2027-nato-summit-will-not-be-held-in-tirana",
+      "src": "Al Jazeera"
+     }
+    ]
+   },
+   {
+    "name": "SPORTS",
+    "items": [
+     {
+      "k": "U-19",
+      "h": "India beat Afghanistan by 8 wkts, enter Asia Cup final",
+      "url": "https://newsonair.gov.in/second-semi-final-of-mens-u19-asia-cup-cricket-between-india-afghanistan-underway-in-oman/",
+      "src": "News On AIR"
+     },
+     {
+      "k": "Shooting",
+      "h": "Vivaan Kapoor wins trap silver, seals LA 2028 quota",
+      "url": "https://newsonair.gov.in/vivaan-kapoor-wins-silver-in-mens-trap-event-at-issf/",
+      "src": "News On AIR"
+     },
+     {
+      "k": "Badminton",
+      "h": "Srikanth, Lakshya Sen enter quarter-finals",
+      "url": "https://newsonair.gov.in/badminton-indian-shuttlers-k-srikanth-and-lakshya-sen-advance-to-mens-singles-qrtfinals/",
+      "src": "News On AIR"
+     },
+     {
+      "k": "Cricket",
+      "h": "Rishabh Pant cleared for New Zealand Tests",
+      "url": "https://indianopinion.org/rishabh-pant-cleared-for-new-zealand-test-series/",
+      "src": "Indian Opinion"
+     }
+    ]
+   },
+   {
+    "name": "ENTERTAINMENT",
+    "items": [
+     {
+      "k": "Box office",
+      "h": "Ramayana crosses ₹750 cr worldwide in six days",
+      "url": "https://www.theweek.in/news/entertainment/2026/11/10/ramayana-day-6-box-office-collection-750-crore.html",
+      "src": "The Week"
+     },
+     {
+      "k": "Telugu",
+      "h": "Kangana to star in Ravi Babu horror ‘Scary Picture’",
+      "url": "https://indianopinion.org/kangana-ranaut-to-star-in-telugu-horror-film-scary-picture/",
+      "src": "Indian Opinion"
+     },
+     {
+      "k": "Music",
+      "h": "Moosewala’s parents sue over ‘Phantom’ release",
+      "url": "https://indianopinion.org/sidhu-moosewalas-parents-launch-legal-action-over-phantom-track-release/",
+      "src": "Indian Opinion"
+     },
+     {
+      "k": "Bollywood",
+      "h": "Karan Johar wants to make 3 films before 60",
+      "url": "https://theprint.in/entertainment/what-next-for-karan-johar-after-koffee-with-karan-he-wants-to-make-3-films-before-60/3096892/",
+      "src": "ThePrint"
+     }
+    ]
+   },
+   {
+    "name": "TECH",
+    "items": [
+     {
+      "k": "China",
+      "h": "Beijing slams US use of Nvidia spy claims for curbs",
+      "url": "https://theprint.in/world/beijing-denounces-us-over-use-of-nvidia-spying-claims-to-defend-tech-curbs/3097021/",
+      "src": "ThePrint / Bloomberg"
+     },
+     {
+      "k": "Cyber",
+      "h": "Centre drops ‘kill switch’ for digital-arrest scams",
+      "url": "https://theprint.in/tech/exclusive-centre-backs-down-on-kill-switch-for-digital-arrests-whatsapps-warnings-first-plan-prevails/3096987/",
+      "src": "ThePrint"
+     }
+    ]
+   }
+  ],
+  "bottom": {
+   "cat": "GOOD NEWS",
+   "k": "Maharashtra",
+   "h": "Raigad’s Shrivardhan beach wins Blue Flag",
+   "intro": "The Konkan beach in Raigad district has earned the international Blue Flag certification for clean water, safety and eco-friendly management.",
+   "art": "beach",
+   "url": "https://newsonair.gov.in/maharashtra-shrivardhan-beach-of-raigad-district-receives-international-blue-flag-certification/",
+   "src": "News On AIR"
+  }
+ },
+ "lead": {
+  "k": "Lead · Economy",
+  "h": "Exports Near $90 Billion; Goods Shipments Hit Record",
+  "art": "img:exports",
+  "url": "https://news.webindia123.com/news/Articles/Business/20261113/4519182.html",
+  "src": "PTI via WebIndia",
+  "url2": "https://www.business-standard.com/amp/economy/news/india-s-oct-merchandise-trade-deficit-rose-to-one-year-high-of-39-88-bn-126111300803_1.html",
+  "src2": "Business Standard / Reuters",
+  "intro": "<b>NEW DELHI:</b> India’s total exports of goods and services rose nearly 30% to $89.99 billion in October. Merchandise shipments alone touched a record $49.47 billion, despite the West Asia conflict.",
+  "para": "Imports grew even faster, lifting the goods trade deficit to a one-year high of $39.88 billion, but a strong services surplus narrowed the overall gap to $20.09 billion. The Sensex fell 319 points a day after retail inflation hit 6.09%, as traders priced in a possible RBI rate hike on 4 December.",
+  "glance": [
+   "Total exports up nearly 30%",
+   "Goods exports at a record high",
+   "Goods deficit at a 1-year high",
+   "Services surplus narrows overall gap"
+  ]
+ },
+ "beside": {
+  "k": "Cricket",
+  "h": "Henry six-for, Young ton: NZ crush India by 244 runs",
+  "intro": "<b>MOUNT MAUNGANUI:</b> Will Young’s 125 off 108 balls lifted New Zealand to 333 at Bay Oval. Matt Henry then took six wickets as India’s chase collapsed early in the fourth ODI. India still lead the series 2-1, with one match left to play.",
+  "url": "https://www.outlookindia.com/sports/cricket/india-vs-new-zealand-4th-odi-live-score-commentary-scorecard-nz-vs-ind-today-match-updates-highlights",
+  "src": "Outlook",
+  "watch": {
+   "title": "MARKET WATCH",
+   "rows": [
+    [
+     "Sensex",
+     "−319 pts",
+     "https://www.business-standard.com/amp/markets/news/stock-market-live-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-bn-agrochem-share-split-november-13-126111300069_1.html"
+    ],
+    [
+     "Nifty",
+     "25,144",
+     "https://www.business-standard.com/amp/markets/news/stock-market-live-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-bn-agrochem-share-split-november-13-126111300069_1.html"
+    ],
+    [
+     "India VIX",
+     "−7%",
+     "https://www.business-standard.com/amp/markets/news/stock-market-live-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-bn-agrochem-share-split-november-13-126111300069_1.html"
+    ],
+    [
+     "CPI (Oct)",
+     "6.09%",
+     "https://indianopinion.org/retail-inflation-hits-6-09-in-october-breaches-rbi-upper-limit/"
+    ],
+    [
+     "FII buy (Thu)",
+     "₹7,831 cr",
+     "https://etvbharat.com/en/business/stock-market-on-november-13-2026-sensex-nifty-retail-inflation-fii-buying-enn26111301333"
+    ],
+    [
+     "Rupee vs $",
+     "+7 paise",
+     "https://etvbharat.com/en/business/stock-market-on-november-13-2026-sensex-nifty-retail-inflation-fii-buying-enn26111301333"
+    ],
+    [
+     "Brent (morning)",
+     "$91.93",
+     "https://www.business-standard.com/amp/markets/news/stock-market-live-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-bn-agrochem-share-split-november-13-126111300069_1.html"
+    ]
+   ]
+  },
+  "more": [
+   {
+    "k": "Telangana",
+    "h": "Guard agency loses licence after child murder",
+    "intro": "Defensor Security lost its licence for hiring a guard without police checks; he allegedly killed a five-year-old for ransom.",
+    "url": "https://indianopinion.org/telangana-cancels-security-agency-licence-over-kowkoor-child-murder/",
+    "src": "Indian Opinion"
+   }
+  ]
+ },
+ "second": {
+  "k": "Second Lead · West Asia",
+  "h": "Iran Says It Hit US Radar in Bahrain",
+  "art": "img:iran",
+  "url": "https://www.aljazeera.com/news/2026/11/13/iran-says-it-struck-us-radar-site-in-bahrain",
+  "src": "Al Jazeera",
+  "url2": "https://www.middleeasteye.net/live-blog/live-blog-update/irgc-navy-says-tanker-explodes-after-hitting-sea-mine-hormuz-strait",
+  "src2": "Middle East Eye",
+  "intro": "Iran’s Revolutionary Guards said they targeted a US early-warning radar in Bahrain, home to the US Navy’s Fifth Fleet. They called it retaliation for a strike on a telecom tower in southern Iran.",
+  "para": "Reuters called it Tehran’s first such claim in a Gulf country since early September. The IRGC Navy also said an LPG tanker blew up after hitting a sea mine in the Strait of Hormuz. Trump said Gulf allies had urged him to hold off big strikes, but he was not sure he agreed. Iran’s Speaker Ghalibaf said Tehran does not want the war to go on and the ‘ball is in America’s court’. For India, which ships much of its crude and LPG through the strait, Brent stays above $90."
+ },
+ "singles": [
+  {
+   "k": "Travel",
+   "h": "Visa forms shrink by up to 70%",
+   "intro": "Main visa types are cut from 13 to nine and forms lose 65–70% of their fields, with a new Visitor Visa from end-2026.",
+   "url": "https://theprint.in/theprint-essential/india-cuts-visa-paperwork-by-up-to-70-introduces-new-visitor-visa-heres-what-changes/3096789/",
+   "src": "ThePrint"
+  },
+  {
+   "k": "Tech",
+   "h": "Microsoft 365 outage hits Outlook, Teams",
+   "intro": "Outlook, Teams and Copilot went down worldwide on Thursday; about 1.3 lakh Outlook complaints were logged at peak.",
+   "url": "https://indianopinion.org/massive-microsoft-outage-hits-outlook-teams-1-3-lakh-users-affected/",
+   "src": "Indian Opinion"
+  },
+  {
+   "k": "Power",
+   "h": "CAG audits 39 state discoms in one go",
+   "intro": "The CAG’s first integrated audit covers 39 state discoms for FY21–FY26, with a survey of 10,000 consumers.",
+   "url": "https://indianopinion.org/cag-starts-first-integrated-audit-of-39-discoms-consumer-survey-on-cards/",
+   "src": "Indian Opinion"
+  },
+  {
+   "k": "Deal",
+   "h": "Murdoch-backed Bodhi Tree takes over A2B",
+   "intro": "Bodhi Tree, co-founded by James Murdoch and Uday Shankar, will invest $180 million for a majority stake in Adyar Ananda Bhavan.",
+   "url": "https://indianopinion.org/bodhi-tree-to-invest-180-million-for-majority-stake-in-a2b/",
+   "src": "Indian Opinion"
+  }
+ ],
+ "row2b": {
+  "k": "Karnataka",
+  "h": "Modi Flags Off Bengaluru–Madgaon Vande Bharat",
+  "intro": "Prime Minister Narendra Modi is launching projects worth over ₹15,600 crore in Bengaluru today, led by a new 16-coach Vande Bharat linking Bengaluru, Mangaluru and Madgaon in Goa.",
+  "para": "He will also open four redeveloped Amrit Bharat stations at Chamarajanagar, Chikkamagaluru, Sakleshpur and Subrahmanya Road. He will dedicate the 45-km Bagalkot–Wandal doubling, part of the 284-km Gadag–Hospet project, and the electrified 55-km Sakleshpur–Subrahmanya ghat section. The 16-coach train, with Executive and Chair Car coaches, will also serve Hassan, Dakshina Kannada, Udupi, Uttara Kannada and South Goa.",
+  "art": "img:vandebharat",
+  "url": "https://newsonair.gov.in/pm-modi-to-launch-various-development-projects-worth-over-rs-15600-cr-in-bengaluru-karnataka-today/",
+  "src": "News On AIR"
+ },
+ "briefrow": [
+  {
+   "k": "IPO",
+   "h": "Crystal Crop IPO opens 18 Nov",
+   "intro": "Price band set at ₹259–272 a share; issue opens Wednesday.",
+   "url": "https://indianopinion.org/crystal-crop-protection-ipo-price-band-set-at-rs-259-to-272-issue-opens-nov-18/"
+  },
+  {
+   "k": "Lebanon",
+   "h": "Iraqi ex-MP killed in Beirut",
+   "intro": "Lebanon asks Syria to extradite two suspects; probe points to strangling.",
+   "url": "https://www.aljazeera.com/news/2026/11/13/after-iraq-ex-mps-killing-lebanon-asks-syria-to-extradite-suspects"
+  },
+  {
+   "k": "Telecom",
+   "h": "Airtel revives ₹299 plan",
+   "intro": "The ₹299 prepaid plan returns, but its daily data allowance is cut to 1GB.",
+   "url": "https://indianopinion.org/airtel-relaunches-rs299-plan-with-daily-data-cut-to-1gb/"
+  },
+  {
+   "k": "Cricket",
+   "h": "ICC mulls 12-team WTC",
+   "intro": "A cap on overseas players in leagues is also on the table.",
+   "url": "https://indianopinion.org/icc-mulls-12-team-wtc-cap-on-overseas-players-in-leagues/"
+  }
+ ],
+ "lighter": {
+  "k": "On a Lighter Note",
+  "h": "That Meow Is a Request: Cats Ask Humans for Help, Study Finds",
+  "intro": "Your cat may be meowing on purpose. Researchers at the University of São Paulo put a favourite treat in a box that 38 pet cats could smell but not reach.",
+  "para": "With an attentive person in the room, the cats meowed 86 times. Left alone, they meowed just 20 times, so a cat was more than 16 times likelier to call out when someone was watching. The study, in <i>Animal Behaviour</i>, calls it ‘recipient-specific signalling’. The authors caution it does not prove cats know we can help. Cat owners may disagree.",
+  "art": "img:cat",
+  "url": "https://theprint.in/science/cats-likely-meow-on-purpose-to-ask-humans-for-help-study-finds/3097096/",
+  "src": "ThePrint"
+ },
+ "images": {
+  "exports": "Infographic: India's exports surge to $89.99 billion in October 2026",
+  "iran": "Infographic: Iran claims strike on US radar in Bahrain",
+  "cat": "Illustration: a cat asks a man for help",
+  "vandebharat": "Photo: A Vande Bharat Express at a station platform"
+ }
+}
