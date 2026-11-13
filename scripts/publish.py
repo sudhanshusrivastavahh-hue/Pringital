@@ -15,6 +15,10 @@ What it does (safe to run any number of times):
   4. Every older edition in archive/ is marked as archived: an ARCHIVED EDITION banner,
      "Archived Edition" instead of "Latest Edition", "Archive" in the page title, and
      links to its own bulletin rather than today's.
+  5. "Share on WhatsApp": each edition gets a one-page A4 PDF of its front page with working
+     links (archive/YYYY-MM-DD/Pringital-News-D-Mon-YYYY.pdf, made by scripts/make_pdf.js), and
+     the button shares that PDF (script in scripts/_share.html). A PDF is (re)made when it is
+     missing or its page changed; pass --pdf to remake them all.
 
 Optional overrides in editions/YYYY-MM-DD.json for the archive list entry:
   "archive_h": headline text, "archive_also": the "Also: ..." line.
@@ -26,7 +30,9 @@ import os
 import re
 import subprocess
 import sys
+import urllib.parse
 
+SITE = "https://pringital.com"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 changed = []
@@ -171,6 +177,44 @@ def mark_archived(d):
         write(p, s)
 
 
+# ------------------------------------------------------------------ WhatsApp PDF share
+
+def pdf_url(d):
+    x = day(d)
+    return f"/archive/{d}/Pringital-News-{x.day}-{x:%b}-{x.year}.pdf"
+
+
+def wire_share(p, d):
+    """Point the page's Share on WhatsApp button at the edition PDF and add the share script."""
+    if not os.path.exists(p):
+        return False
+    s = read(p)
+    if 'class="lnk wa"' not in s:
+        return False
+    title = f"Pringital News · {dateline(d)}"
+    wa = "https://wa.me/?text=" + urllib.parse.quote(f"{title} — front page (PDF): {SITE}{pdf_url(d)}", safe="")
+    s = re.sub(r'<a class="lnk wa" href="[^"]*"(?: data-pdf="[^"]*")?(?: data-title="[^"]*")?',
+               lambda m: f'<a class="lnk wa" href="{html.escape(wa)}" data-pdf="{pdf_url(d)}" data-title="{html.escape(title)}"', s)
+    js = read(path("scripts", "_share.html"))
+    if 'id="pn-share"' in s:
+        s = re.sub(r'<script id="pn-share">.*?</script>\n?', lambda m: js, s, count=1, flags=re.S)
+    else:
+        i = s.rfind("</body>")
+        s = s[:i] + js + s[i:] if i >= 0 else s + js
+    write(p, s)
+    return True
+
+
+def make_pdfs(dates):
+    if not dates:
+        return
+    r = subprocess.run(["node", path("scripts", "make_pdf.js"), *dates], cwd=ROOT)
+    if r.returncode:
+        sys.exit("PDF generation failed: the Share on WhatsApp button would point at a missing PDF. "
+                 "Fix it and run publish.py again before pushing.")
+    changed.extend(pdf_url(d).lstrip("/") for d in dates)
+
+
 def main():
     args = sys.argv[1:]
     built = build_latest() if "--build" in args else None
@@ -186,6 +230,11 @@ def main():
         own_bulletin_links(d)
         if d != latest:
             mark_archived(d)
+    shared = [d for d in dates if wire_share(path("archive", d, "index.html"), d)]
+    wire_share(path("today", "index.html"), latest)
+    make_pdfs([d for d in shared if "--pdf" in args
+               or not os.path.exists(path(pdf_url(d).lstrip("/")))
+               or f"archive/{d}/index.html" in changed])
 
     print(f"Latest edition: {dateline(latest)}")
     print("Updated:\n  " + "\n  ".join(changed) if changed else "Already up to date.")

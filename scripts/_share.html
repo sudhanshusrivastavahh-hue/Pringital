@@ -1,0 +1,27 @@
+<script id="pn-share">
+/* Share on WhatsApp: on phones, share the edition's PDF (links stay clickable) through the
+   system share sheet. Where files can't be shared (most desktops), the link's own href opens
+   WhatsApp with a message carrying the PDF's address. Inserted by scripts/publish.py. */
+(function(){
+  var a=document.querySelector('a.lnk.wa[data-pdf]'); if(!a) return;
+  var url=a.getAttribute('data-pdf'), name=url.split('/').pop(), title=a.getAttribute('data-title')||'Pringital News';
+  var file=null, loading=null;
+  try{ if(!(navigator.canShare&&navigator.canShare({files:[new File([''],name,{type:'application/pdf'})]}))) return; }catch(e){ return; }
+  function load(){
+    if(!loading) loading=fetch(url).then(function(r){ if(!r.ok) throw new Error('PDF '+r.status); return r.blob(); })
+      .then(function(b){ return file=new File([b],name,{type:'application/pdf'}); })
+      .catch(function(e){ loading=null; throw e; });
+    return loading;
+  }
+  function fallback(){ var w=window.open(a.href,'_blank','noopener'); if(!w) location.href=a.href; }
+  // Fetch ahead of the tap: some browsers only allow sharing straight after the tap itself.
+  var saver=navigator.connection&&navigator.connection.saveData;
+  if(!saver) addEventListener('load',function(){ setTimeout(function(){ load().catch(function(){}); },1500); });
+  a.addEventListener('pointerdown',function(){ load().catch(function(){}); },{passive:true});
+  a.addEventListener('click',function(ev){
+    ev.preventDefault();
+    function go(f){ return navigator.share({files:[f],title:title,text:title+' · '+location.origin+'/'}); }
+    (file?go(file):load().then(go)).catch(function(e){ if(!e||e.name!=='AbortError') fallback(); });
+  });
+})();
+</script>
