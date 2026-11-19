@@ -1,0 +1,19 @@
+<svg viewBox="0 0 400 260" role="img" aria-label="Map graphic: Cyclone Akvan moving north-west across the Bay of Bengal toward the coast between Narsapur and Puri, expected near Gopalpur on 20 November">
+<rect width="400" height="260" fill="#DCE7F7"/>
+<path d="M0 0 H232 C222 30 214 52 196 76 C176 104 150 120 132 150 C118 174 112 206 104 260 H0 Z" fill="#F4EBDD"/>
+<path d="M232 0 H400 V40 C372 34 340 30 312 22 C290 16 262 8 232 0 Z" fill="#F4EBDD"/>
+<path d="M0 0 H232 C222 30 214 52 196 76 C176 104 150 120 132 150 C118 174 112 206 104 260" fill="none" stroke="#1B3A7A" stroke-width="2"/>
+<path d="M232 0 C262 8 290 16 312 22 C340 30 372 34 400 40" fill="none" stroke="#1B3A7A" stroke-width="2"/>
+<g fill="#1B3A7A" opacity=".7" font-family="Montserrat,Inter,Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1.5"><text x="40" y="70">ODISHA</text><text x="28" y="186">ANDHRA PRADESH</text><text x="300" y="14">BANGLADESH</text><text x="240" y="84" fill="#25539E" font-size="12" letter-spacing="3">BAY OF BENGAL</text></g>
+<path d="M150 136 C176 98 190 84 205 70" fill="none" stroke="#D2232A" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 0"/>
+<path d="M150 136 C176 98 190 84 205 70" fill="none" stroke="#D2232A" stroke-width="22" stroke-linecap="round" opacity=".14"/>
+<path d="M310 196 C290 178 270 166 250 150 C228 134 196 112 178 98" fill="none" stroke="#1B3A7A" stroke-width="3" stroke-dasharray="7 6" stroke-linecap="round"/>
+<g transform="translate(300 188)"><circle r="30" fill="#1B3A7A" opacity=".12"/><path d="M0 -20 C14 -20 22 -8 16 4 C24 -2 22 -16 12 -24 C-4 -30 -22 -20 -22 -2 C-22 8 -16 16 -8 20 C-20 20 -28 10 -26 -2 C-30 14 -18 26 0 26 C14 26 24 16 24 4 C24 -12 12 -20 0 -20Z" fill="#1B3A7A"/><circle r="6" fill="#DCE7F7"/></g>
+<g font-family="Montserrat,Inter,Arial,sans-serif"><circle cx="178" cy="98" r="7" fill="#D2232A" stroke="#fff" stroke-width="2.5"/>
+<rect x="196" y="104" width="132" height="34" rx="6" fill="#fff" stroke="#D2232A" stroke-width="1.5"/>
+<text x="204" y="119" font-size="10.5" font-weight="900" fill="#D2232A" letter-spacing=".6">NEAR GOPALPUR</text><text x="204" y="132" font-size="9.5" font-weight="700" fill="#0E2350">Landfall likely 20 Nov</text>
+<circle cx="150" cy="136" r="4" fill="#0E2350"/><text x="112" y="150" font-size="9" font-weight="700" fill="#0E2350">Narsapur</text>
+<circle cx="205" cy="70" r="4" fill="#0E2350"/><text x="212" y="66" font-size="9" font-weight="700" fill="#0E2350">Puri</text>
+<rect x="246" y="222" width="146" height="30" rx="6" fill="#0E2350"/><text x="256" y="236" font-size="10" font-weight="900" fill="#fff">90–100 km/h</text><text x="256" y="247" font-size="8.5" font-weight="600" fill="#F5CDCF">gusts up to 110 · 72,000 moved</text>
+<text x="12" y="250" font-size="9.5" font-weight="900" fill="#D2232A" letter-spacing="1.2">SEVERE CYCLONIC STORM AKVAN</text></g>
+</svg>

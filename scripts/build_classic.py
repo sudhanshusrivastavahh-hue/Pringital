@@ -28,6 +28,9 @@ def arrow(url):
 
 # ------------------------------------------------------------------ illustrations (original)
 def art(kind):
+    if kind.startswith("svg:"):
+        fp = os.path.join(ROOT, "assets", "art", kind[4:] + ".svg")
+        return open(fp, encoding="utf-8").read() if os.path.exists(fp) else ""
     if kind == "manila":
         return '''<svg viewBox="0 0 400 230" role="img" aria-label="Map-style graphic: India and the ten ASEAN countries linked to Manila, venue of the 23rd India-ASEAN Summit and 21st East Asia Summit">
 <rect width="400" height="230" fill="#0D47A1"/><circle cx="330" cy="40" r="80" fill="#1565C0"/>
@@ -123,6 +126,105 @@ def art(kind):
     return ""
 
 
+# ------------------------------------------------------------------ masthead (navy & press red)
+BRAND = {"navy": "#1B3A7A", "red": "#D2232A"}
+
+
+def masthead(d, sfx="p"):
+    import random
+    rnd = random.Random(7)
+    cols = "".join(f'<rect x="{18+i*26}" y="10" width="18" height="76" fill="none" stroke="#BFD2F0" stroke-opacity=".16"/>' +
+                   "".join(f'<line x1="{20+i*26}" x2="{34+i*26}" y1="{18+j*7}" y2="{18+j*7}" stroke="#BFD2F0" stroke-opacity=".18" stroke-width="2"/>' for j in range(9))
+                   for i in range(9))
+    pix = ""
+    for _ in range(60):
+        x = 470 + rnd.random() * 300; y = 6 + rnd.random() * 70; sz = 3 + rnd.random() * 6
+        col = BRAND["red"] if rnd.random() < .28 else "#E8EEF8"
+        pix += f'<rect x="{x:.0f}" y="{y:.0f}" width="{sz:.0f}" height="{sz:.0f}" fill="{col}" opacity="{.18+rnd.random()*.45:.2f}"/>'
+    sky = ('<g fill="#0A1A3C"><path d="M0 104 V90 H40 V84 H60 V90 H90 V78 H104 V90 H130 V104Z"/>'
+           '<path d="M150 104 V86 H170 V72 h4 v-6 h6 v6 h4 V86 H206 V104Z"/>'
+           '<path d="M560 104 V74 H568 V66 H612 V74 H620 V104 H604 V84 a14 14 0 0 0 -28 0 V104Z"/>'
+           '<path d="M690 104 L696 50 h8 l2 -6 h4 l2 6 h8 L726 104Z"/><path d="M736 104 V86 H760 V78 H780 V86 H800 V104Z"/></g>')
+    px = "".join(f'<rect x="{x}" y="{y}" width="{w}" height="{w}" rx="1" fill="{c}"/>' for x, y, w, c in
+                 [(62, 8, 8, BRAND["red"]), (74, 2, 6, "#FFFFFF"), (70, 18, 6, "#FFFFFF"), (82, 12, 7, BRAND["red"]), (86, 26, 5, "#FFFFFF"), (92, 4, 5, BRAND["red"]), (78, 32, 5, BRAND["red"]), (94, 20, 4, "#FFFFFF")])
+    emb = (f'<svg class="pm-emb" viewBox="0 0 100 100" aria-hidden="true"><path d="M10 20 H58 L66 28 V90 H10 Z" fill="#FFFFFF"/>'
+           f'<path d="M58 20 V28 H66" fill="none" stroke="#C9D4E6" stroke-width="2"/><rect x="16" y="27" width="34" height="6" rx="1.5" fill="{BRAND["red"]}"/>'
+           '<g stroke="#9DB0CC" stroke-width="2.2" stroke-linecap="round"><line x1="16" y1="41" x2="36" y2="41"/><line x1="16" y1="48" x2="36" y2="48"/><line x1="16" y1="55" x2="36" y2="55"/><line x1="16" y1="62" x2="36" y2="62"/>'
+           '<line x1="42" y1="41" x2="60" y2="41"/><line x1="42" y1="48" x2="60" y2="48"/><line x1="42" y1="55" x2="60" y2="55"/><line x1="16" y1="72" x2="60" y2="72"/><line x1="16" y1="79" x2="52" y2="79"/></g>'
+           f'{px}<path d="M66 52 l18 -18 l8 8 l-18 18 l-11 3 z" fill="{BRAND["red"]}"/><path d="M63 63 l3 -11 l8 8 z" fill="#FFFFFF"/></svg>')
+    badge = (f'<svg viewBox="0 0 100 100" aria-hidden="true"><defs><path id="pmring{sfx}" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0"/></defs>'
+             f'<circle cx="50" cy="50" r="49" fill="{BRAND["red"]}"/><circle cx="50" cy="50" r="27" fill="#0E2350"/><path d="M43 37 L64 50 L43 63 Z" fill="#FFFFFF"/>'
+             f'<g class="pm-ring"><text font-family="Montserrat,Inter,Arial,sans-serif" font-size="11" font-weight="800" letter-spacing="1.4" fill="#FFFFFF"><textPath href="#pmring{sfx}">4-MIN BULLETIN • LISTEN •</textPath></text></g></svg>')
+    short = f'{d:%a}, {d.day} {d:%b %Y}'
+    return f'''<header class="pmast">
+  <svg class="pm-bg" viewBox="0 0 800 104" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs><linearGradient id="pmbg{sfx}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0E2350"/><stop offset=".55" stop-color="#1B3A7A"/><stop offset="1" stop-color="#25539E"/></linearGradient>
+    <radialGradient id="pmsun{sfx}"><stop offset="0" stop-color="#F3C969"/><stop offset="1" stop-color="#F3C969" stop-opacity="0"/></radialGradient></defs>
+    <rect width="800" height="104" fill="url(#pmbg{sfx})"/><circle cx="640" cy="96" r="80" fill="url(#pmsun{sfx})" opacity=".45"/>{cols}{pix}
+    <path d="M0 98 C200 82 420 104 800 88 V104 H0Z" fill="#4F7BC4" opacity=".25"/>{sky}<rect y="100" width="800" height="4" fill="{BRAND["red"]}"/>
+  </svg>
+  <div class="pm-in">
+    <a class="pm-brand" href="/" aria-label="Pringital News home">{emb}<span class="pm-wm"><span class="pm-w1">PRIN<span class="pm-g">GITAL</span><span class="pm-dots"><i></i><i></i><i></i></span></span>
+      <span class="pm-w2"><span class="pm-news">NEWS</span><span class="pm-sub">Credible like Print · Fast like Digital</span></span></span></a>
+    <div class="pm-ed"><div class="pm-word">The Living Newspaper</div><div class="pm-rule"></div><div class="pm-line">New Delhi · {short}</div><div class="pm-latest">● Latest Edition</div></div>
+  </div>
+  <a class="pm-listen" href="/archive/{d.isoformat()}/bulletin/" title="Listen to the 4-minute bulletin" aria-label="Listen to the 4-minute bulletin">{badge}</a>
+</header>'''
+
+
+MAST_CSS = """
+/* Brand colours: ink navy and press red */
+:root{--accent:#1B3A7A;--accent-soft:#E6ECF7;--hl:#EEF2FA;--warm:#D2232A;--warm-soft:#FDECEC;--warm-ink:#A3161C;--warm-line:#F5CDCF}
+:root[data-theme="dark"]{--accent:#9DB8F0;--accent-soft:#1F2B44;--hl:#1F2B44;--warm:#F06A6F;--warm-soft:#3A1D20;--warm-ink:#F5A3A6;--warm-line:#4A2629}
+/* masthead */
+.pmast{position:relative;aspect-ratio:800/104;min-height:84px;border-radius:10px;overflow:hidden;color:#fff;container-type:inline-size;margin-bottom:8px}
+.pmast .pm-bg{position:absolute;inset:0;width:100%;height:100%}
+.pmast .pm-in{position:relative;display:flex;align-items:center;height:100%;padding:0 14cqw 0 2.4cqw;gap:4cqw}
+.pmast a{color:#fff;text-decoration:none}
+.pm-brand{flex:0 0 47cqw;display:flex;align-items:center;gap:1.6cqw;min-width:0}
+.pm-emb{flex:0 0 8.6cqw;width:8.6cqw;height:8.6cqw;filter:drop-shadow(0 .5cqw 1.2cqw rgba(0,0,0,.35))}
+.pm-wm{min-width:0;display:flex;flex-direction:column;gap:.8cqw;font-family:Montserrat,Inter,Arial,sans-serif}
+.pm-w1{font-weight:900;font-size:5.3cqw;line-height:.9;letter-spacing:-.025em;white-space:nowrap;text-shadow:0 .25cqw 1cqw rgba(0,0,0,.35);display:flex;align-items:flex-end}
+.pm-g{color:#D2232A;text-shadow:0 .2cqw .6cqw rgba(0,0,0,.25)}
+.pm-dots{display:inline-flex;gap:.35cqw;margin:0 0 .9cqw .5cqw;align-items:flex-end}
+.pm-dots i{display:block;width:.9cqw;height:.9cqw;background:#D2232A;border-radius:.15cqw}
+.pm-dots i:nth-child(2){width:.65cqw;height:.65cqw;background:#fff;margin-bottom:1.1cqw}
+.pm-dots i:nth-child(3){width:.5cqw;height:.5cqw;margin-bottom:2cqw}
+.pm-w2{display:flex;align-items:center;gap:1cqw;white-space:nowrap}
+.pm-news{font-weight:900;font-size:2.1cqw;letter-spacing:.5em;padding:.35cqw .4cqw .35cqw .9cqw;background:#D2232A;color:#fff;border-radius:.5cqw}
+.pm-sub{font-weight:600;font-size:1.15cqw;letter-spacing:.04em;opacity:.9;font-style:italic}
+.pm-ed{min-width:0;display:flex;flex-direction:column;gap:.6cqw;font-family:Montserrat,Inter,Arial,sans-serif}
+.pm-word{white-space:nowrap;font-weight:900;font-size:2.8cqw;line-height:1;text-shadow:0 .2cqw .8cqw rgba(0,0,0,.35)}
+.pm-rule{height:.45cqw;width:60%;background:#D2232A;border-radius:1cqw}
+.pm-line{white-space:nowrap;font-weight:700;font-size:1.45cqw;letter-spacing:.08em;text-transform:uppercase;opacity:.92}
+.pm-latest{font-weight:800;font-size:1.05cqw;letter-spacing:.14em;text-transform:uppercase;color:#FFD9DA}
+.pm-listen{position:absolute;right:2.2cqw;top:50%;transform:translateY(-50%);width:9.6cqw;aspect-ratio:1;display:block;border-radius:50%;box-shadow:0 .5cqw 1.8cqw rgba(0,0,0,.35)}
+.pm-listen svg{width:100%;height:100%;display:block}
+.pm-ring{transform-box:view-box;transform-origin:50px 50px;animation:pmspin 18s linear infinite}
+@keyframes pmspin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.pm-ring{animation:none}}
+.pm-listen:focus-visible,.pm-brand:focus-visible{outline:3px solid #fff;outline-offset:3px}
+html[data-mode="paper"] .pmast{border-radius:6px;margin-bottom:0}
+@media (max-width:640px){
+ html[data-mode="web"] .pmast{aspect-ratio:auto;min-height:0;border-radius:12px}
+ html[data-mode="web"] .pmast .pm-in{flex-wrap:wrap;padding:14px 14px 16px;gap:12px}
+ html[data-mode="web"] .pm-brand{flex:1 1 100%;gap:10px}
+ html[data-mode="web"] .pm-emb{flex-basis:44px;width:44px;height:44px}
+ html[data-mode="web"] .pm-w1{font-size:clamp(24px,8vw,32px)}
+ html[data-mode="web"] .pm-dots i{width:5px;height:5px}
+ html[data-mode="web"] .pm-w2{flex-wrap:wrap;gap:5px 8px}
+ html[data-mode="web"] .pm-news{font-size:11px;padding:2px 3px 2px 6px}
+ html[data-mode="web"] .pm-sub{font-size:clamp(9px,2.7vw,11px);white-space:nowrap}
+ html[data-mode="web"] .pm-ed{flex:1 1 auto;padding-right:74px}
+ html[data-mode="web"] .pm-word{font-size:clamp(14px,4.4vw,17px)}
+ html[data-mode="web"] .pm-rule{height:3px}
+ html[data-mode="web"] .pm-line{font-size:10px}
+ html[data-mode="web"] .pm-latest{font-size:8.5px}
+ html[data-mode="web"] .pm-listen{width:60px;right:14px;top:auto;bottom:14px;transform:none}
+}
+"""
+
+
 # ------------------------------------------------------------------ paper page
 def side(blocks):
     out = []
@@ -186,9 +288,9 @@ def web(E, dateline):
     secs.insert(1, '<section class="wsec"><h3 class="wsh"><span>Delhi–NCR</span></h3><ul class="wlist">' + "".join(wl2(h, t, u) for h, t, u in D["more"]) + "".join(wl(h, u) for h, u in D["pointers"]) + '</ul></section>')
     secs += [f'<section class="wsec"><h3 class="wsh"><span>{esc(b["sec"])}</span></h3><ul class="wlist">' + "".join(wl2(h, t, u) for h, t, u in b["items"]) + '</ul></section>' for b in E["band"]]
     depth = "".join(f'<article class="wdep"><h3><a href="{esc(u)}" target="_blank" rel="noopener">{esc(h)}<span class="arr" aria-hidden="true">↗</span></a></h3><p>{esc(t)}</p></article>' for h, t, u in E["duo"])
+    d = datetime.date.fromisoformat(E["date"])
     return f'''<div class="w">
-<div class="masthead"><h1>PRINGITAL <span>NEWS</span></h1><p class="motto"><b>Trust Like Print.</b> Speed Like Digital.</p>
-<div class="meta"><span>{dateline}</span><span>New Delhi Edition</span><span class="rt">4-min read</span><span>Tap ↗ for the detailed story</span></div></div>
+{masthead(d, "w")}
 <section class="wtop">
 {card(L, "wlead")}
 <section class="wsec wlatest"><h3 class="wsh"><span>Latest</span></h3><ul class="wlist">{"".join(wl2(h, t, u) for h, t, u in L["latest"])}</ul></section>
@@ -242,9 +344,11 @@ def build(E, tpl, tdate):
     head = tpl[:i_body].replace("</style>", A4_CSS + "</style>", 1) if "</style>" in tpl[:i_body] else tpl[:i_body]
     # last </style> in head gets the A4 rules
     j = tpl[:i_body].rfind("</style>")
-    head = tpl[:j] + A4_CSS + tpl[j:i_body]
+    head = tpl[:j] + A4_CSS + MAST_CSS + tpl[j:i_body]
+    head = head.replace("0,600;0,700;1,400;1,600", "0,600;0,700;0,800;0,900;1,400;1,600")
     i_main = tpl.index('<main class="main">')
     top = tpl[i_body:i_main]
+    top = re.sub(r'<div class="paperonly">.*?<div class="webonly">.*?<div class="meta">.*?</div>\s*</div>\s*</div>', masthead(d), top, count=1, flags=re.S)
     i_imp = tpl.index('<footer class="imprint">')
     i_w = tpl.index('<div class="w">')
     footer = tpl[i_imp:i_w]
