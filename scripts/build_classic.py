@@ -360,6 +360,9 @@ def build(E, tpl, tdate):
     page = page.replace(f'{t:%A}%2C%20{t.day}', f'{d:%A}%2C%20{d.day}')
     page = page.replace(f'{t.day}-{t:%b}-{t.year}', f'{d.day}-{d:%b}-{d.year}')
     page = page.replace("var s=Math.min(1,(fit.clientWidth||794)/794);", "var PW=page.offsetWidth||%d;var s=Math.min(1,(fit.clientWidth||PW)/PW);" % PW)
+    if "/assets/js/listen.js" not in page:
+        i = page.rindex("</body>")
+        page = page[:i] + '<script src="/assets/js/listen.js" defer></script>\n' + page[i:]
     return page
 
 
